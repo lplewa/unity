@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: f95cc1169a39c7344871a72e294bb1f9
+guid: ba9dae31df0176a4da31ea5fcc013418
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Clayton2_0
-    21300002: Clayton2_1
-    21300004: Clayton2_2
-    21300006: Clayton2_3
-    21300008: Clayton2_4
-    21300010: Clayton2_5
-    21300012: Clayton2_6
-    21300014: Clayton2_7
-    21300016: Clayton2_8
-    21300018: Clayton2_9
-    21300020: Clayton2_10
-    21300022: Clayton2_11
+    21300000: Clayton2a_0
+    21300002: Clayton2a_1
+    21300004: Clayton2a_2
+    21300006: Clayton2a_3
+    21300008: Clayton2a_4
+    21300010: Clayton2a_5
+    21300012: Clayton2a_6
+    21300014: Clayton2a_7
+    21300016: Clayton2a_8
+    21300018: Clayton2a_9
+    21300020: Clayton2a_10
+    21300022: Clayton2a_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -86,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,7 +96,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clayton2_0
+      name: Clayton2a_0
       rect:
         serializedVersion: 2
         x: 7
@@ -110,13 +110,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea8cc296bef7d884d87853f1ab651bf2
+      spriteID: 0b8f34055c4779b458b62de0370ca743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_1
+      name: Clayton2a_1
       rect:
         serializedVersion: 2
         x: 31
@@ -130,13 +130,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef384b4286fea9f44b0ca6d706148c7c
+      spriteID: 8ea8f76606c916f4b88ffe1972a2fc24
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_2
+      name: Clayton2a_2
       rect:
         serializedVersion: 2
         x: 55
@@ -150,13 +150,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b7809ee97049a45a6e63838ecdfad9
+      spriteID: b33ca64db4c68e240b5a91a3f62d29d1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_3
+      name: Clayton2a_3
       rect:
         serializedVersion: 2
         x: 3
@@ -170,13 +170,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1decb61abb1f8654691768ad374dd4f7
+      spriteID: a1df4e995c1b88945b11a897ffd372e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_4
+      name: Clayton2a_4
       rect:
         serializedVersion: 2
         x: 27
@@ -190,13 +190,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8ae8379d1c2f5144a1d195fcd56875b
+      spriteID: a2e8064d487556a46b6184bcb241c579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_5
+      name: Clayton2a_5
       rect:
         serializedVersion: 2
         x: 51
@@ -210,13 +210,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70de5b1d9e60d3744b724ef71e6575ff
+      spriteID: dba856ac4d29e1946a7e8855fff86ea8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_6
+      name: Clayton2a_6
       rect:
         serializedVersion: 2
         x: 6
@@ -230,13 +230,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c5ed8630469bf84e8713c434f63c0fe
+      spriteID: 6798416524267484598b4a6e2a6841ae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_7
+      name: Clayton2a_7
       rect:
         serializedVersion: 2
         x: 30
@@ -250,13 +250,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bf68df314916184aa249b0d76249d6e
+      spriteID: f4c90702c3a41e041afce8d5cb16c03a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_8
+      name: Clayton2a_8
       rect:
         serializedVersion: 2
         x: 54
@@ -270,13 +270,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c845c65bdd8cc46b1ab4d4b7e95e40
+      spriteID: 73232bec68440c249846d1957248866e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_9
+      name: Clayton2a_9
       rect:
         serializedVersion: 2
         x: 3
@@ -290,13 +290,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcbf3f319839a3e4296d694f2723ed56
+      spriteID: e802a91bd4c769a48b52b47efbbfce0e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_10
+      name: Clayton2a_10
       rect:
         serializedVersion: 2
         x: 27
@@ -310,13 +310,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e75df53796a4f4cb788d65a5df6d7c
+      spriteID: cc0ecd36fd761a64695b7694166a05ef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Clayton2_11
+      name: Clayton2a_11
       rect:
         serializedVersion: 2
         x: 51
@@ -330,7 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec1e5be7458f0194f8af588708d7df0c
+      spriteID: aa579804c0e29d34b8eb7f48dbfc1a3e
       vertices: []
       indices: 
       edges: []
@@ -338,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d2355cd4e217107448f6c97939014ca3
+    spriteID: 9ec994a409af7e742899251125a2d5a3
     vertices: []
     indices: 
     edges: []

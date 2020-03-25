@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoom.unity
+    guid: 47ba0e780d92b19418d7b0825eeef931
+  - enabled: 1
+    path: Assets/Scenes/ClaytonAuntRoom.unity
+    guid: 803ca7c27b8ca3b4e8722c8cbf7221de
+  - enabled: 1
+    path: Assets/Scenes/MagicCircle.unity
+    guid: 6afa56804499dd1429145921f2685ef5
+  - enabled: 1
+    path: Assets/Scenes/FuneralHome.unity
+    guid: a907b3a059b7aae46973cfe37790e3aa
+  - enabled: 1
+    path: Assets/Scenes/RosenbergHouse.unity
+    guid: eeff571339a8aee4d95801c43fc6b320
+  - enabled: 1
+    path: Assets/Scenes/Tavern.unity
+    guid: 0f3a742b0599f014cb91a89b5f78aa16
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: 232ac7f1b95b4474baa79e45adf28580
+  - enabled: 1
+    path: Assets/Scenes/Travel.unity
+    guid: 3ed5329935dec1849945581ec3e1c759
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/86b33dc6200ccf04f80d69927d6c882c
+    guid: 86b33dc6200ccf04f80d69927d6c882c
   m_configObjects: {}

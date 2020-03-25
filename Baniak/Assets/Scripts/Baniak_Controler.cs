@@ -20,6 +20,8 @@ public class Baniak_Controler : MonoBehaviour
     public Dialogue_controler dialogue_Controler = null;
 
     public State state;
+
+
     void Start()
     {
         //state = State.Moving;
@@ -31,11 +33,13 @@ public class Baniak_Controler : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+       
         if (state == State.Moving) {
             move();
         }
 
-        if (state == State.Talking) {
+        if (state == State.Talking)
+        {
             talk();
         }
     }

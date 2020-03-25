@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1532fbc07819d034e961eb7f54562b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baniak: {fileID: 0}
+  baniak: {fileID: 1169041133}
 --- !u!114 &351079697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,13 +1461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dupa Dupa Dupa Dupa Dupa Dupa Dupa Dupa
-
-    Dupa Dupa Dupa Dupa Dupa Dupa Dupa Dupa
-
-    Dupa Dupa Dupa Dupa Dupa Dupa Dupa Dupa
-
-    Dupa Dupa Dupa Dupa Dupa Dupa Dupa Dupa'
+  m_Text: Testowy tekst tak bardzo
 --- !u!222 &890548376
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1616,6 +1610,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1169041129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1696060491006704674, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696060490389323773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f252a214656bf04ab41d8127d1d3c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1169041133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696060490389323773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec256c686e84d2d4a911f808faf53a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1481553572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,6 +1990,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+        type: 3}
+      propertyPath: dialogue_Controler
+      value: 
+      objectReference: {fileID: 1169041129}
     - target: {fileID: 1696060491006704674, guid: c6fcce2aa641db441be9a8d2e54f8de0,
         type: 3}
       propertyPath: Name

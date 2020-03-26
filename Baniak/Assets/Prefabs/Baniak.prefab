@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1696060491006704675}
   - component: {fileID: 1696060491006704674}
   m_Layer: 0
-  m_Name: Baniak 1
+  m_Name: Baniak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec256c686e84d2d4a911f808faf53a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
   dialogue_Controler: {fileID: 0}
   state: 0
 --- !u!50 &1696060491006704671

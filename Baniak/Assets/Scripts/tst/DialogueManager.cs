@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
-    public Text dialogueText;
+    private Text nameText;
+    private Text dialogueText;
     public Queue<string> sentences;
     public Animator dialogueAnimator;
 
@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        nameText = FindObjectOfType<LevelManager>().name;
+        dialogueText = FindObjectOfType<LevelManager>().lines;
+        dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
     }
 
     public void StartDialogue(NPCDialogue dialogue)

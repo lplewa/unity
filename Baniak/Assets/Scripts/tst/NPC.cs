@@ -6,8 +6,9 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     private DialogueManager dialogueManager;
-    public NPCDialogue dialogue;
+    private NPCDialogue dialogue;
     private bool dialogueStarted;
+    public bool isRotating;
 
     private void Start()
     {
@@ -28,28 +29,42 @@ public class NPC : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("NPC Collision");
-        this.dialogueManager.StartDialogue(dialogue);
-        dialogueStarted = true;
+        StartTalking();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("NPC Collision");
-        this.dialogueManager.StartDialogue(dialogue);
-        dialogueStarted = true;
+        StartTalking();
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("End Collision");
-        dialogueStarted = false;
-        dialogueManager.dialogueAnimator.SetBool("isOpen", false);
+
+        StopTalking();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("End Trigger");
+        StopTalking();
+    }
+
+    private void StartTalking()
+    {
+        if (isRotating)
+        {
+            GetComponent<Animator>().SetBool("Speaking", true);
+        }
+        this.dialogueManager.StartDialogue(dialogue);
+        dialogueStarted = true;
+    }
+
+    private void StopTalking()
+    {
+        if (isRotating)
+        {
+            GetComponent<Animator>().SetBool("Speaking", false);
+        }
+        Debug.Log("End Collision");
         dialogueStarted = false;
         dialogueManager.dialogueAnimator.SetBool("isOpen", false);
     }

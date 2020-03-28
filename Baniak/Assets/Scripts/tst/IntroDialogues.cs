@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class IntroDialogues : MonoBehaviour
 {
-    public DialogueManager dialogueManager;
-    public NPCDialogue dialogue;
+    private DialogueManager dialogueManager;
+    private NPCDialogue dialogue;
 
     // Start is called before the first frame update
     void Start()

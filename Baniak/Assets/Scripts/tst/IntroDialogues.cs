@@ -22,5 +22,10 @@ public class IntroDialogues : MonoBehaviour
         {
             this.dialogueManager.DisplayNextSentence();
         }
+
+        if (dialogueManager.sentences.Count==0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("BaniaksPlayRoom");
+        }
     }
 }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 3dabc93087413e043a7000bdf2561abd
+  - enabled: 1
     path: Assets/Scenes/BaniaksPlayRoom.unity
     guid: 47ba0e780d92b19418d7b0825eeef931
   - enabled: 1
@@ -30,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Travel.unity
     guid: 3ed5329935dec1849945581ec3e1c759
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/86b33dc6200ccf04f80d69927d6c882c
+    path: 
     guid: 86b33dc6200ccf04f80d69927d6c882c
   m_configObjects: {}

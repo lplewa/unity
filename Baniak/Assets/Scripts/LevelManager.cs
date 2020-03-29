@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public GameObject ui;
-    public Text name;
+    public Text characterName;
     public Text lines;
     public Animator dialogueAnimator;
 

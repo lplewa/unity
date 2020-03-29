@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: "Anonimowe po\u0142\u0105czenie Skype"
+    characterName: "Anonimowe po\u0142\u0105czenie"
     sentences:
     - "I jak tam sesja? Trudno si\u0119 j\u0105 prowadzi gdy nie masz z kim gra\u0107,
       co nie? "
@@ -1629,6 +1629,11 @@ PrefabInstance:
       propertyPath: lines
       value: 
       objectReference: {fileID: 1493854311677826551}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: characterName
+      value: 
+      objectReference: {fileID: 1493854311938096271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1493854311634365458
@@ -1665,7 +1670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -275}
+  m_AnchoredPosition: {x: 0, y: -274.99994}
   m_SizeDelta: {x: 0, y: -542.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493854311634365460

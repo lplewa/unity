@@ -15,16 +15,16 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-        nameText = FindObjectOfType<LevelManager>().name;
+        nameText = FindObjectOfType<LevelManager>().characterName;
         dialogueText = FindObjectOfType<LevelManager>().lines;
         dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
     }
 
     public void StartDialogue(NPCDialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        Debug.Log("Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
-        nameText.text = dialogue.name;
+        nameText.text = dialogue.characterName;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
         {

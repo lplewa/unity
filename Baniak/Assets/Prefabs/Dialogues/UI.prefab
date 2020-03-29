@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4706422706354832999, guid: 5e5d8d8eb7cdcca45980f1b5c0cd41fd,
         type: 3}
       propertyPath: m_Name
-      value: Dialog Panel Variant
+      value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 4706422706354833019, guid: 5e5d8d8eb7cdcca45980f1b5c0cd41fd,
         type: 3}
@@ -116,6 +116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616508152546331976, guid: 5e5d8d8eb7cdcca45980f1b5c0cd41fd,
+        type: 3}
+      propertyPath: m_Name
+      value: InventorySlots
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e5d8d8eb7cdcca45980f1b5c0cd41fd, type: 3}

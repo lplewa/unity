@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,5 +10,5 @@ public class LevelManager : MonoBehaviour
     public Text characterName;
     public Text lines;
     public Animator dialogueAnimator;
-
- }
+    public bool isInventoryVisible;
+}

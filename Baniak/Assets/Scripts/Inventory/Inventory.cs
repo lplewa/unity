@@ -11,18 +11,18 @@ public class Inventory : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("More tha one instance of inventory found");
+            Debug.LogWarning("More than one instance of inventory found");
+            Destroy(this.gameObject);
             return;
         }
 
         instance = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
     #endregion
     public delegate void OnItemChanged();
     public OnItemChanged OnItemChangedCallback;
-
     public int space = 5;
-
     public List<InventoryItem> items = new List<InventoryItem>(); 
 
     public bool Add(InventoryItem item)
@@ -39,6 +39,10 @@ public class Inventory : MonoBehaviour
         }
   
         return true;
+    }
+    public static Inventory GetInventoryInstance()
+    {
+        return instance;
     }
 }
  

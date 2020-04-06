@@ -1,8 +1,26 @@
-﻿  
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
-{
+{/*
+    #region Singleton
+
+    public static InventoryUI instance;
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of inventory found");
+            Destroy(this.gameObject);
+            return;
+        }
+
+        instance = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
+    }
+    #endregion
+    */
     public Transform itemsParent;
     Inventory inventory;
     InventorySlot[] slots;
@@ -10,9 +28,10 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory=Inventory.instance;
+        inventory = Inventory.GetInventoryInstance();
         inventory.OnItemChangedCallback += UpdateUI;
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -35,6 +54,6 @@ public class InventoryUI : MonoBehaviour
              }
         }
         Debug.Log("UpdatingUI");
-
+        this.transform.gameObject.SetActive(true);
     }
 }

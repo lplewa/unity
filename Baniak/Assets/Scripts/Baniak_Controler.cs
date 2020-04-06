@@ -8,7 +8,8 @@ public class Baniak_Controler : MonoBehaviour
     public enum State
     {
         Moving,
-        Talking
+        Talking,
+        Standing
     }
 
 
@@ -24,7 +25,7 @@ public class Baniak_Controler : MonoBehaviour
 
     void Start()
     {
-        //state = State.Moving;
+        state = State.Moving;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         dialogue_Controler = GetComponent<Dialogue_controler>();
@@ -43,6 +44,7 @@ public class Baniak_Controler : MonoBehaviour
              talk();
          }*/
         move();
+        stay();
     }
 
     void move()
@@ -105,5 +107,14 @@ public class Baniak_Controler : MonoBehaviour
                 state = State.Moving;
             }
         }
+    }
+
+    public void stay()
+    {
+        if (state == State.Standing)
+        {
+
+        }
+        
     }
 }

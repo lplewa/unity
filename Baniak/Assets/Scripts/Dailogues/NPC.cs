@@ -48,7 +48,7 @@ public class NPC : MonoBehaviour
         StopTalking();
     }
 
-    private void StartTalking()
+    public void StartTalking()
     {
         if (isRotating)
         {

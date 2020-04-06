@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class InventoryItem :ScriptableObject
+public class InventorySlots : MonoBehaviour
 {
-    public string itemName;
-    public Sprite icon;
+
+  
+
+    public static InventorySlots instance;
+
     // Start is called before the first frame update
     void Start()
     {

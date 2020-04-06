@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278e73a54f9aeaa48af8da02fdc1771a, type: 3}
   m_Name: Apart Catalogue
   m_EditorClassIdentifier: 
-  itemName: ApartCatalogue
+  itemName: katalog apartu
   icon: {fileID: 21300006, guid: acb36014fdc42ec47b0907fea4826d84, type: 3}

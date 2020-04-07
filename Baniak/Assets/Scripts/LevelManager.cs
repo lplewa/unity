@@ -10,5 +10,4 @@ public class LevelManager : MonoBehaviour
     public Text characterName;
     public Text lines;
     public Animator dialogueAnimator;
-    public bool isInventoryVisible;
 }

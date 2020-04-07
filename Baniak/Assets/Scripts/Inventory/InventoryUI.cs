@@ -3,24 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
-{/*
-    #region Singleton
-
-    public static InventoryUI instance;
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("More than one instance of inventory found");
-            Destroy(this.gameObject);
-            return;
-        }
-
-        instance = this;
-        GameObject.DontDestroyOnLoad(this.gameObject);
-    }
-    #endregion
-    */
+{
     public Transform itemsParent;
     Inventory inventory;
     InventorySlot[] slots;

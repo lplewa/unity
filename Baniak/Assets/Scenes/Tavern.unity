@@ -4360,6 +4360,11 @@ PrefabInstance:
       propertyPath: inventoryVisible
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9022910686683051877, guid: bb913740faea32e419939d074a5a2ad9,
+        type: 3}
+      propertyPath: hideInventory
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb913740faea32e419939d074a5a2ad9, type: 3}
 --- !u!114 &1968459114 stripped

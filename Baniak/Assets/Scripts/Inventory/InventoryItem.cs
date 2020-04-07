@@ -7,6 +7,7 @@ public class InventoryItem :ScriptableObject
 {
     public string itemName;
     public Sprite icon;
+    public bool isFound;
     // Start is called before the first frame update
     void Start()
     {

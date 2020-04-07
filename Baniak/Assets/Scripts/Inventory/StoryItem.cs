@@ -39,6 +39,7 @@ public class StoryItem : MonoBehaviour
         bool wasPickedUp=Inventory.instance.Add(item);
         if (wasPickedUp)
         {
+            item.isFound = true;
             Destroy(gameObject);
         }
    

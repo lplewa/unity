@@ -2271,6 +2271,17 @@ PrefabInstance:
       propertyPath: characterName
       value: 
       objectReference: {fileID: 1956820384}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: inventoryItemContainer
+      value: 
+      objectReference: {fileID: 58344923}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: storyItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 068d9a7b4cf66b841968d5d11b8840c1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1253597049

@@ -4029,6 +4029,23 @@ PrefabInstance:
       propertyPath: characterName
       value: 
       objectReference: {fileID: 102598439}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: inventoryItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 01893c0520e68e94c98338370eceb873,
+        type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: inventoryItemContainer
+      value: 
+      objectReference: {fileID: 6958326769348922624}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: storyItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 01893c0520e68e94c98338370eceb873,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1001 &1628965645
@@ -5467,7 +5484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2545a29562ce61049b26a39b5bfd55b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 6ccbf9339ffaedc49a85265464259ab6, type: 2}
+  item: {fileID: 11400000, guid: 01893c0520e68e94c98338370eceb873, type: 2}
   succesDialog: {fileID: 0}
 --- !u!1 &7823564285952696237
 GameObject:

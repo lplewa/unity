@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278e73a54f9aeaa48af8da02fdc1771a, type: 3}
   m_Name: Broda
   m_EditorClassIdentifier: 
-  itemName: "Broda S\u0142owika"
+  itemName: "broda S\u0142owika"
   icon: {fileID: 21300000, guid: acb36014fdc42ec47b0907fea4826d84, type: 3}
+  isFound: 0

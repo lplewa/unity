@@ -11,16 +11,18 @@ public class ShowCoinsCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coinsText.GetComponent<Text>().text = coinCollector.coins.Count.ToString() + coinCollector.space.ToString();
-
+        coinCollector = FindObjectOfType<CoinCollector>();
+        SetCoinsCounter();
     }
 
     // Update is called once per frame
     void Update()
     {
-        coinsText.GetComponent<Text>().text = coinCollector.coins.Count.ToString() + coinCollector.space.ToString();
-        
+        SetCoinsCounter();
     }
 
-
+    private void SetCoinsCounter()
+    {
+        coinsText.GetComponent<Text>().text = coinCollector.coins.Count.ToString() + "/" + coinCollector.space.ToString();
+    }
 }

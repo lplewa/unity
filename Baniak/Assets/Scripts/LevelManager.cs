@@ -10,15 +10,17 @@ public class LevelManager : MonoBehaviour
     public Text characterName;
     public Text lines;
     public Animator dialogueAnimator;
-   // private List<InventoryItem> items = new List<InventoryItem>();
     public StoryItem inventoryItemContainer;
     public InventoryItem storyItem;
+    public CoinPickup coinPickup;
+    public CoinItem coin;
 
     private void Start()
     {
-        //items = FindObjectOfType<Inventory>().items;
         inventoryItemContainer = FindObjectOfType<StoryItem>();
+        coinPickup = FindObjectOfType<CoinPickup>();
         DestroyPreviouslyFoundStoryItem();
+        DestroyPreviouslyFoundCoin();
     }
     private void Update()
     {
@@ -26,23 +28,29 @@ public class LevelManager : MonoBehaviour
     }
 
     private void DestroyPreviouslyFoundStoryItem()
-    {/*
-        foreach (InventoryItem item in items)
+    {
+        if (storyItem != null)
         {
-            if (item.itemName == inventoryItemContainer.item.itemName && item.isFound)
+            if (storyItem.isFound)
             {
                 Destroy(inventoryItemContainer);
                 Destroy(inventoryItemContainer.gameObject);
                 Debug.Log("Destroyed " + inventoryItemContainer.item.itemName);
             }
         }
-        */
 
-        if (storyItem.isFound)
+    }
+
+    private void DestroyPreviouslyFoundCoin()
+    {
+        if (coinPickup != null)
         {
-            Destroy(inventoryItemContainer);
-            Destroy(inventoryItemContainer.gameObject);
-            Debug.Log("Destroyed " + inventoryItemContainer.item.itemName);
+            if (coin.isFound)
+            {
+                Destroy(coinPickup);
+                Destroy(coinPickup.gameObject);
+                Debug.Log("Destroyed " + coinPickup.coin.coinName);
+            }
         }
     }
 }

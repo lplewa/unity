@@ -241,7 +241,7 @@ MonoBehaviour:
     characterName: 
     sentences:
     - Jest rok 2020 przed nastaniem Cthulhu.
-    - "Wszystkie piwnice s\u0105 opuszczone przez graczy....Wszystkie?"
+    - "Wszystkie piwnice s\u0105 opuszczone przez graczy.... Wszystkie?"
     - "Nie! Jedna jedyna piwnica zamieszkana przez nieugi\u0119tych erpegowc\xF3w"
     - "przyjmuje zagubione dusze i uprzykrza \u017Cycie innym niedowiarkom pokazuj\u0105c,"
     - "\u017Ce RPG jeszcze nie przepad\u0142o, wr\u0119cz przeciwnie, dla nich to
@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 336985761}
+  dialogueEnded: 0
 --- !u!114 &327725326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +404,8 @@ GameObject:
   - component: {fileID: 571749617}
   - component: {fileID: 571749616}
   - component: {fileID: 336985761}
+  - component: {fileID: 571749621}
+  - component: {fileID: 571749620}
   m_Layer: 5
   m_Name: Dialog Panel
   m_TagString: Untagged
@@ -492,6 +495,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &571749620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571749615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.0754717, g: 0.0110359555, b: 0.0110359555, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &571749621
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571749615}
+  m_CullTransparentMesh: 0
 --- !u!1 &636213741
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,8 +669,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 1763a8d8368684542b603002e74330e1, type: 3}
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     private Text dialogueText;
     public Queue<string> sentences;
     public Animator dialogueAnimator;
+    public bool dialogueEnded;
 
     // Start is called before the first frame update
     void Start()
@@ -57,5 +58,6 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of conversation");
         dialogueAnimator.SetBool("isOpen", false);
+        dialogueEnded = true;
     }
 }

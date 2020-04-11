@@ -1525,6 +1525,15 @@ MonoBehaviour:
     - "Biedaczek zostawi\u0142 swoj\u0105 sakiewk\u0119."
     - "Niestety rozsypa\u0142a mi si\u0119 ca\u0142a jej zawarto\u015B\u0107."
     - "Pomo\u017Cesz mi zebra\u0107 wszystko z powrotem?"
+  missionNotAccomplishedDialogue:
+    characterName: Ciotka Claytona
+    sentences:
+    - " No, m\xF3j drogi. Chyba jeszcze czego\u015B nam brakuje."
+  successDialogue:
+    characterName: Ciotka Claytona
+    sentences:
+    - "Fantastycznie! Oddaj mu t\u0105 sakiewk\u0119. Dorzucam r\xF3wnie\u017C m\xF3j
+      numer, \r\nmo\u017Ce p\xF3\u017Aniej spotkamy si\u0119 na jak\u0105\u015B kaw\u0119?"
 --- !u!114 &1230537379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,6 +1547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 0
+  hasDialogueVariants: 1
 --- !u!114 &1230537380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
   dialogueEnded: 0
+  missionAccomplished: 0
 --- !u!1001 &1367780593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3355,6 +3366,12 @@ MonoBehaviour:
     characterName: 
     sentences:
     - 
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &5281469842992498851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,6 +3386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
   dialogueEnded: 0
+  missionAccomplished: 0
 --- !u!4 &5281469842992498852
 Transform:
   m_ObjectHideFlags: 0
@@ -3397,6 +3415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 0
+  hasDialogueVariants: 0
 --- !u!114 &5415540552007658704
 MonoBehaviour:
   m_ObjectHideFlags: 0

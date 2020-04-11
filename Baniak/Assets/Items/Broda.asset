@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "broda S\u0142owika"
   icon: {fileID: 21300000, guid: acb36014fdc42ec47b0907fea4826d84, type: 3}
-  isFound: 0
+  isFound: 1

@@ -9,10 +9,11 @@ public class NPC : MonoBehaviour
     private NPCDialogue dialogue;
     private bool dialogueStarted;
     public bool isRotating;
+    public bool hasDialogueVariants;
 
     private void Start()
     {
-        dialogueManager = GetComponent<DialogueManager>();
+        dialogueManager = this.GetComponent<DialogueManager>();
         dialogue = GetComponent<DialogueTrigger>().dialogue;
         dialogueStarted = false;
     }
@@ -23,8 +24,10 @@ public class NPC : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 this.dialogueManager.DisplayNextSentence();
+                StopTalkingIfDialogueEnded();
             }
         }
+     
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,25 +39,33 @@ public class NPC : MonoBehaviour
     {
         StartTalking();
     }
-
+    
     private void OnCollisionExit2D(Collision2D collision)
     {
 
         StopTalking();
     }
-
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopTalking();
     }
-
+    
     public void StartTalking()
     {
         if (isRotating)
         {
             GetComponent<Animator>().SetBool("Speaking", true);
         }
-        this.dialogueManager.StartDialogue(dialogue);
+        if (!hasDialogueVariants)
+        {
+            this.dialogueManager.StartDialogue(dialogue);
+        }
+        else
+        {
+
+            GetComponent<DialogueTrigger>().TriggerDialogue();
+        }
         dialogueStarted = true;
     }
 
@@ -67,5 +78,10 @@ public class NPC : MonoBehaviour
         Debug.Log("End Collision");
         dialogueStarted = false;
         dialogueManager.dialogueAnimator.SetBool("isOpen", false);
+    }
+
+    private void StopTalkingIfDialogueEnded()
+    {
+        if (dialogueManager.dialogueEnded) StopTalking();
     }
 }

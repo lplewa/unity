@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public Queue<string> sentences;
     public Animator dialogueAnimator;
     public bool dialogueEnded;
+    public bool missionAccomplished;
+    private Baniak_Controler baniak;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour
         nameText = FindObjectOfType<LevelManager>().characterName;
         dialogueText = FindObjectOfType<LevelManager>().lines;
         dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
+        baniak = FindObjectOfType<Baniak_Controler>();
     }
 
     public void StartDialogue(NPCDialogue dialogue)
@@ -59,5 +62,6 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation");
         dialogueAnimator.SetBool("isOpen", false);
         dialogueEnded = true;
+        baniak.state = Baniak_Controler.State.Moving;
     }
 }

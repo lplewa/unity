@@ -1919,6 +1919,14 @@ MonoBehaviour:
     - "NIEEE MAMY tu kosztowno\u015Bci, tyyylko trumny. PAULUS si\u0119 na tym zna!!"
     - "Pooooszukujesz jego katalogu? GDZIE\u015A go tuuu widzia\u0142em."
     - "RRRROOZEJRZYJ SI\u0118, a naaa pewno na niego trafisz."
+  missionNotAccomplishedDialogue:
+    characterName: Filip
+    sentences:
+    - "RRRROOZEJRZYJ SI\u0118, a naaa pewno na niego trafisz."
+  successDialogue:
+    characterName: Filip
+    sentences:
+    - "\u015A\u015A\u015AWIETNIE!!!!! PAULUS naaaa pewno b\u0119dzie zachwycony!!!!"
 --- !u!114 &1014884806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,6 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 0
+  hasDialogueVariants: 1
 --- !u!114 &1014884807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,8 +1953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueAnimator: {fileID: 2114171316}
+  dialogueAnimator: {fileID: 0}
   dialogueEnded: 0
+  missionAccomplished: 0
 --- !u!1001 &1075772538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2065,6 +2075,12 @@ MonoBehaviour:
     characterName: 
     sentences:
     - 
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &1096007653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 0
+  hasDialogueVariants: 0
 --- !u!114 &1096007654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,6 +2109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 2114171316}
   dialogueEnded: 0
+  missionAccomplished: 0
 --- !u!1 &1178242798
 GameObject:
   m_ObjectHideFlags: 0

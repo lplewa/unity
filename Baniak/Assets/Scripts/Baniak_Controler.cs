@@ -9,17 +9,15 @@ public class Baniak_Controler : MonoBehaviour
     {
         Moving,
         Talking,
-        Standing
     }
 
 
     public float speed = 6.0f;
-
+    public float movementSpeed = 4.5f;
     private Rigidbody2D rb = null;
     private Animator animator = null;
     private Vector2 face = Vector2.down;
     public Dialogue_controler dialogue_Controler = null;
-
     public State state;
 
 
@@ -34,20 +32,41 @@ public class Baniak_Controler : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        /*
          if (state == State.Moving) {
-             move();
+             //move();
+            Move();
          }
 
          if (state == State.Talking)
          {
              talk();
-         }*/
-        move();
-        stay();
+         }
+    
+    }
+     void Move()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        SetMoveAnimation();
     }
 
-    void move()
+    void SetMoveAnimation()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        if (horizontalInput != 0)
+        {
+            if (horizontalInput > 0) animator.SetInteger("MoveDirection", 2);
+            else animator.SetInteger("MoveDirection", 1);
+        }
+        if (verticalInput != 0)
+        {
+            if(verticalInput>0) animator.SetInteger("MoveDirection", 3);
+            else animator.SetInteger("MoveDirection", 4);
+        }
+    }
+  /*  void move()
     {
         rb.velocity = Vector2.zero;
      //   rb.angularVelocity = 0;
@@ -56,7 +75,7 @@ public class Baniak_Controler : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         if (x != 0 && y != 0)
-            return; /*no diagonal movement */
+            return; /*no diagonal movement 
 
         if (x != 0) {
             if (x > 0) {
@@ -77,6 +96,7 @@ public class Baniak_Controler : MonoBehaviour
                 animator.SetInteger("MoveDirection", 4);
             }
         }
+
         moveDirection = new Vector2(x, y);
         moveDirection *= speed;
         rb.velocity = moveDirection;
@@ -93,7 +113,7 @@ public class Baniak_Controler : MonoBehaviour
             }
         }
     }
-    
+    */
     public void startDialouge(Dialouge dialouge)
     {
         state = State.Talking;
@@ -101,20 +121,13 @@ public class Baniak_Controler : MonoBehaviour
     }
 
     void talk()
-    {
+    {/*
         if (Input.anyKeyDown) {
             if (dialogue_Controler.NextSentence()) {
                 state = State.Moving;
             }
         }
+        */
     }
 
-    public void stay()
-    {
-        if (state == State.Standing)
-        {
-
-        }
-        
-    }
 }

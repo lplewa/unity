@@ -396,10 +396,10 @@ MonoBehaviour:
     characterName: Kozi
     sentences:
     - Stranger danger!! Stranger danger!!
-    - "Jeste\u015B znajomym Cioci? Ale nie takim jak Pan B\u0105k? <patrzy podejrzliwie> "
+    - "Jeste\u015B znajomym Cioci? Ale nie takim jak Pan B\u0105k?"
     - "To dobrze. M\xF3g\u0142by Pan Jej powiedzie\u0107,"
     - "\u017Ce nied\u0142ugo wr\xF3c\u0119 na obiad? "
-    - "Zgubi\u0142em gdzie\u015B m\xF3j worek na p\u0142atki."
+    - "Zgubi\u0142em gdzie\u015B moj\u0105 sakiewk\u0119."
     - "Karmi\u0119 go\u0142\u0119bie! I mam szczura!"
     - "Chce Pan zobaczy\u0107?"
 --- !u!114 &169445796
@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1001 &178845306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1067,6 +1068,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 142
       objectReference: {fileID: 0}
+    - target: {fileID: 8803340107785227993, guid: d00581adf26460944ad9b134a1cd1b15,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803340107785227993, guid: d00581adf26460944ad9b134a1cd1b15,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d00581adf26460944ad9b134a1cd1b15, type: 3}
 --- !u!1001 &259289720
@@ -1607,6 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1 &564291383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1 &598014891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3051,11 @@ PrefabInstance:
       propertyPath: characterName
       value: 
       objectReference: {fileID: 599644325}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 1867984122}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1001 &918901132
@@ -3486,9 +3504,9 @@ MonoBehaviour:
   dialogue:
     characterName: Lewy
     sentences:
-    - "O kolejny klient! Witam w Bramach Mohra! W czym mog\u0119 pom\xF3c?"
-    - "Szukasz czego\u015B cennego? Rozumiem."
-    - "Spis kosztowno\u015Bci ma Filip. Kr\u0119ci si\u0119 gdzie\u015B tutaj.."
+    - "S\u0142uchaj przyjacielu, nie widzia\u0142e\u015B gdzie\u015B mojego katalogu?"
+    - "Bardzo go potrzebuj\u0119, a nigdzie nie mog\u0119 go znale\u017A\u0107."
+    - "Mo\u017Ce Filip b\u0119dzie mia\u0142 jakie\u015B wskaz\xF3wki."
 --- !u!114 &1042616975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,6 +3520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1 &1087776286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,6 +4290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!61 &1512750128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4376,6 +4396,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb913740faea32e419939d074a5a2ad9, type: 3}
+--- !u!114 &1867984122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7377155106111930142, guid: f2dd00a73c671764787c29f9dd8329c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2073702107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ee5e3d2434c84db1f17a3e0bad14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1921046367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921046369}
+  - component: {fileID: 1921046368}
+  m_Layer: 0
+  m_Name: TavernManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1921046368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921046367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24a9047162b88641a853c8feb56a0f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 1867984122}
+--- !u!4 &1921046369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921046367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41177553, y: 3.6154056, z: 0.058269754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1968459114 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 845498767, guid: 49c9b0ef7b4309543a7072c6ea9d6a39,
@@ -4455,7 +4531,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8911369442926699965, guid: ca7cd72bb9545384bb6bce1227a3a144, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca7cd72bb9545384bb6bce1227a3a144, type: 3}
 --- !u!1001 &2073702107
 PrefabInstance:
@@ -4472,12 +4549,12 @@ PrefabInstance:
     - target: {fileID: 7377155106111930209, guid: f2dd00a73c671764787c29f9dd8329c3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6197188
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 7377155106111930209, guid: f2dd00a73c671764787c29f9dd8329c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4083824
+      value: 7.56
       objectReference: {fileID: 0}
     - target: {fileID: 7377155106111930209, guid: f2dd00a73c671764787c29f9dd8329c3,
         type: 3}
@@ -4523,6 +4600,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377155106111930208, guid: f2dd00a73c671764787c29f9dd8329c3,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 862226675
+      objectReference: {fileID: 0}
+    - target: {fileID: 7377155106111930208, guid: f2dd00a73c671764787c29f9dd8329c3,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dd00a73c671764787c29f9dd8329c3, type: 3}
@@ -4676,9 +4763,9 @@ MonoBehaviour:
     - "Dobrze, \u017Ce jeste\u015B."
     - "Masz mo\u017Ce ochot\u0119 na przygod\u0119? "
     - "Musz\u0119 odwiedzi\u0107 w Nuln swojego wuja,"
-    - "je\u015Bli chcesz si\u0119 wybra\u0107 ze mn\u0105,"
-    - "to oczywi\u015Bcie zapraszam. Jednak nim rozpoczniemy podr\xF3\u017C, musz\u0119
-      znale\u017A\u0107 sw\xF3j kostur. "
+    - "Je\u015Bli chcesz si\u0119 wybra\u0107 ze mn\u0105, to oczywi\u015Bcie zapraszam. "
+    - "Jednak nim rozpoczniemy podr\xF3\u017C, musz\u0119 znale\u017A\u0107 sw\xF3j
+      kostur. "
     - "Widzia\u0142e\u015B go gdzie\u015B?"
 --- !u!114 &2090376552
 MonoBehaviour:
@@ -4693,6 +4780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1 &2147065060
 GameObject:
   m_ObjectHideFlags: 0

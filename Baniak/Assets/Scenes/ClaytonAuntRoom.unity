@@ -705,6 +705,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dd00a73c671764787c29f9dd8329c3, type: 3}
+--- !u!114 &631502510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7377155106111930142, guid: f2dd00a73c671764787c29f9dd8329c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 631502509}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ee5e3d2434c84db1f17a3e0bad14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &632425056 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 845498767, guid: 49c9b0ef7b4309543a7072c6ea9d6a39,
@@ -1510,9 +1522,9 @@ MonoBehaviour:
     characterName: Ciotka Claytona
     sentences:
     - "Witaj. Nie widzia\u0142e\u015B gdzie\u015B mo\u017Ce mojego siostrze\u0144ca? "
-    - "Zostawi\u0142 biedaczek swoj\u0105 sakiewk\u0119."
-    - "Mo\u017Ce m\xF3g\u0142by\u015B mu j\u0105 dostarczy\u0107? "
-    - "Dam ci j\u0105 pod warunkiem, \u017Ce odpowiesz prawid\u0142owo na zagadk\u0119 "
+    - "Biedaczek zostawi\u0142 swoj\u0105 sakiewk\u0119."
+    - "Niestety rozsypa\u0142a mi si\u0119 ca\u0142a jej zawarto\u015B\u0107."
+    - "Pomo\u017Cesz mi zebra\u0107 wszystko z powrotem?"
 --- !u!114 &1230537379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1001 &1367780593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,6 +1660,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8990f75df21b21a44982947cea83657f,
         type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 631502510}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1461926553
@@ -2140,7 +2158,7 @@ PrefabInstance:
     - target: {fileID: 3536326659545191698, guid: d00581adf26460944ad9b134a1cd1b15,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 921.5999
+      value: 921.59985
       objectReference: {fileID: 0}
     - target: {fileID: 3536326659545191698, guid: d00581adf26460944ad9b134a1cd1b15,
         type: 3}
@@ -2951,15 +2969,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1696060491006704675, guid: c6fcce2aa641db441be9a8d2e54f8de0,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1696060491006704675, guid: c6fcce2aa641db441be9a8d2e54f8de0, type: 3}
@@ -3350,6 +3368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!4 &5281469842992498852
 Transform:
   m_ObjectHideFlags: 0

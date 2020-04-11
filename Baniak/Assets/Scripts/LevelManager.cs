@@ -14,9 +14,11 @@ public class LevelManager : MonoBehaviour
     public InventoryItem storyItem;
     public CoinPickup coinPickup;
     public CoinItem coin;
+    public Portal portal;
 
     private void Start()
     {
+        SetPortalInactive();
         inventoryItemContainer = FindObjectOfType<StoryItem>();
         coinPickup = FindObjectOfType<CoinPickup>();
         DestroyPreviouslyFoundStoryItem();
@@ -24,7 +26,7 @@ public class LevelManager : MonoBehaviour
     }
     private void Update()
     {
-
+        ShowPortal();
     }
 
     private void DestroyPreviouslyFoundStoryItem()
@@ -51,6 +53,17 @@ public class LevelManager : MonoBehaviour
                 Destroy(coinPickup.gameObject);
                 Debug.Log("Destroyed " + coinPickup.coin.coinName);
             }
+        }
+    }
+    void SetPortalInactive()
+    {
+        if (portal!=null)portal.transform.gameObject.SetActive(false);
+    }
+    private void ShowPortal()
+    {
+        if (Input.GetKeyDown("p")&& portal!=null)
+        {
+            portal.transform.gameObject.SetActive(true);
         }
     }
 }

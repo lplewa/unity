@@ -224,6 +224,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dd00a73c671764787c29f9dd8329c3, type: 3}
+--- !u!114 &155053388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7377155106111930142, guid: f2dd00a73c671764787c29f9dd8329c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 155053387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ee5e3d2434c84db1f17a3e0bad14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &224669611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,6 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1001 &784093129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2242,6 +2255,11 @@ PrefabInstance:
       propertyPath: coinPickup
       value: 
       objectReference: {fileID: 4868563902619834941}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 155053388}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!50 &1696060489804468693
@@ -2506,6 +2524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
 --- !u!1 &4868563902797827722
 GameObject:
   m_ObjectHideFlags: 0

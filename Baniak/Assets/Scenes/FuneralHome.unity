@@ -356,6 +356,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2dd00a73c671764787c29f9dd8329c3, type: 3}
+--- !u!114 &63064351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7377155106111930142, guid: f2dd00a73c671764787c29f9dd8329c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 63064350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ee5e3d2434c84db1f17a3e0bad14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &230513592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,10 +1915,10 @@ MonoBehaviour:
   dialogue:
     characterName: Filip
     sentences:
-    - "My tu nie mamy kosztowno\u015Bci tylko trumny. Pan Paulus si\u0119 na tym zna. "
-    - "Ale je\u015Bli jednak czujesz si\u0119 godzien by porozmawia\u0107 o\u2026
-      sprawach, "
-    - "to musisz odpowiedzie\u0107 mi na to pytanie"
+    - O! Koooolejny klient! WIIITAMY w Bramach Mohra!!!
+    - "NIEEE MAMY tu kosztowno\u015Bci, tyyylko trumny. PAULUS si\u0119 na tym zna!!"
+    - "Pooooszukujesz jego katalogu? GDZIE\u015A go tuuu widzia\u0142em."
+    - "RRRROOZEJRZYJ SI\u0118, a naaa pewno na niego trafisz."
 --- !u!114 &1014884806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 2114171316}
+  dialogueEnded: 0
 --- !u!1001 &1075772538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2078,6 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 2114171316}
+  dialogueEnded: 0
 --- !u!1 &1178242798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2319,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 51da6915e32e04d43b275a941b8f2504,
         type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 63064351}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1253597049

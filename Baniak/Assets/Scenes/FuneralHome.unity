@@ -1792,9 +1792,9 @@ GameObject:
   - component: {fileID: 1014884803}
   - component: {fileID: 1014884802}
   - component: {fileID: 1014884801}
-  - component: {fileID: 1014884807}
   - component: {fileID: 1014884806}
   - component: {fileID: 1014884805}
+  - component: {fileID: 1014884807}
   - component: {fileID: 1014884804}
   m_Layer: 0
   m_Name: Filip

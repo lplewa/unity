@@ -11,18 +11,17 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        DialogueManager dialogueObject = FindObjectOfType<DialogueManager>();
-        if (!dialogueObject.dialogueEnded)
-        {
-            dialogueObject.StartDialogue(dialogue);
-        }else if (!dialogueObject.missionAccomplished)
-        {
-            dialogueObject.StartDialogue(missionNotAccomplishedDialogue);
-        }
-        else
-        {
-            dialogueObject.StartDialogue(successDialogue);
-        }
+        GetComponent<DialogueManager>().StartDialogue(FindDialogue());
 
+       // FindObjectOfType<DialogueManager>().StartDialogue(FindDialogue());
+
+    }
+
+    public NPCDialogue FindDialogue()
+    {
+        DialogueManager dialogueObject = GetComponent<DialogueManager>();
+        if (!dialogueObject.dialogueEnded) return dialogue;
+        else if (!dialogueObject.missionAccomplished) return missionNotAccomplishedDialogue;
+        else return successDialogue;
     }
 }

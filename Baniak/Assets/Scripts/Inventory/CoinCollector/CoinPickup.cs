@@ -17,13 +17,13 @@ public class CoinPickup : MonoBehaviour
         succesDialog = GetComponentInParent<NPC>();
         baniak = FindObjectOfType<Baniak_Controler>();
         dialogueEnded = succesDialog.GetComponent<DialogueManager>().dialogueEnded;
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+      ///  succesDialog.GetComponent<DialogueTrigger>()
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +40,6 @@ public class CoinPickup : MonoBehaviour
         bool wasPickedUp = CoinCollector.instance.Add(coin);
         if (wasPickedUp)
         {
-            Debug.Log("Coin dialogue ended");
             coin.isFound = true;
             Destroy(gameObject);
         }

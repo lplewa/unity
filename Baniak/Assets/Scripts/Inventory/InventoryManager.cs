@@ -46,7 +46,7 @@ public class InventoryManager : MonoBehaviour
             else
             {
                 inventoryUI.transform.gameObject.SetActive(true);
-                Debug.Log("Inventory visibility changed to false");
+                Debug.Log("Inventory visibility changed to true");
 
             }
         }

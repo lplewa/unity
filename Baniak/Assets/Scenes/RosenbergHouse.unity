@@ -2067,10 +2067,10 @@ GameObject:
   - component: {fileID: 1169826188}
   - component: {fileID: 1169826187}
   - component: {fileID: 1169826186}
-  - component: {fileID: 1169826189}
-  - component: {fileID: 1169826192}
   - component: {fileID: 1169826190}
   - component: {fileID: 1169826191}
+  - component: {fileID: 1169826192}
+  - component: {fileID: 1169826189}
   m_Layer: 0
   m_Name: MsRosenberg
   m_TagString: Untagged
@@ -2184,11 +2184,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169826185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
+  m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRotating: 0
-  hasDialogueVariants: 1
+  dialogueAnimator: {fileID: 0}
+  dialogueEnded: 0
+  missionAccomplished: 0
 --- !u!114 &1169826191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2205,21 +2206,20 @@ MonoBehaviour:
     characterName: Pani Rosenberg
     sentences:
     - "Dzie\u0144 dobry. Przyszed\u0142 Pan by uratowa\u0107 swojego przyjaciela? "
-    - "B\u0119dzie potrzebowa\u0142 Pan do tego specjalnego przedmiotu. "
+    - "B\u0119dzie potrzebowa\u0142 Pan do tego specjalnego przedmiotu."
     - "Jest on ukryty gdzie\u015B na posesji,"
     - "Poleci\u0142abym s\u0142u\u017Cbie by go przynios\u0142a,"
     - "ale jak sam Pan widzi, gdzie\u015B znikn\u0119li."
   missionNotAccomplishedDialogue:
     characterName: Pani Rosenberg
     sentences:
-    - "B\u0119dzie potrzebowa\u0142 Pan do tego specjalnego przedmiotu. "
-    - "Jest on ukryty gdzie\u015B na posesji."
+    - "Przedmiot, kt\xF3rego pan potrzebuje jest ukryty gdzie\u015B na posesji"
   successDialogue:
     characterName: Pani Rosenberg
     sentences:
     - " Fantastycznie, widz\u0119 \u017Ce znalaz\u0142 Pan zgub\u0119."
     - "Prosz\u0119 przekaza\u0107 serdeczne pozdrowienia dla Pana Noble\u2019a, "
-    - "a Panu \u017Cycz\u0119 powodzenia"
+    - "a Panu \u017Cycz\u0119 powodzenia\r"
 --- !u!114 &1169826192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,12 +2229,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1169826185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
+  m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
-  missionAccomplished: 0
+  isRotating: 0
+  hasDialogueVariants: 1
 --- !u!1 &1192568227
 GameObject:
   m_ObjectHideFlags: 0

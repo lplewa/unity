@@ -14,18 +14,21 @@ public class NPC : MonoBehaviour
     private void Start()
     {
         dialogueManager = this.GetComponent<DialogueManager>();
+        Debug.Log("NPC DialogueManager Set: " + dialogueManager);
         dialogue = GetComponent<DialogueTrigger>().dialogue;
+        Debug.Log("NPC dialogue set: " + dialogue);
         dialogueStarted = false;
+        Debug.Log("NPC dialogue started set: " + dialogueStarted);
+       
     }
     private void Update()
     {
         if (dialogueStarted)
         {
             if (Input.GetKeyDown("space"))
-            {
-                this.dialogueManager.DisplayNextSentence();
-                StopTalkingIfDialogueEnded();
-            }
+                   {
+                       this.dialogueManager.DisplayNextSentence();
+                   }
         }
      
     }
@@ -57,20 +60,22 @@ public class NPC : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("Speaking", true);
         }
+        
         if (!hasDialogueVariants)
         {
             this.dialogueManager.StartDialogue(dialogue);
+
         }
         else
         {
-
             GetComponent<DialogueTrigger>().TriggerDialogue();
         }
         dialogueStarted = true;
     }
 
-    private void StopTalking()
+    public void StopTalking()
     {
+        Debug.Log("StopTalking Started");
         if (isRotating)
         {
             GetComponent<Animator>().SetBool("Speaking", false);
@@ -78,10 +83,7 @@ public class NPC : MonoBehaviour
         Debug.Log("End Collision");
         dialogueStarted = false;
         dialogueManager.dialogueAnimator.SetBool("isOpen", false);
+        Debug.Log("StopTalking Stopped");
     }
 
-    private void StopTalkingIfDialogueEnded()
-    {
-        if (dialogueManager.dialogueEnded) StopTalking();
-    }
 }

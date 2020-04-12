@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 646d5d3251700db438d8239a0a199dae, type: 3}
   coinName: bramy
-  isFound: 0
+  isFound: 1

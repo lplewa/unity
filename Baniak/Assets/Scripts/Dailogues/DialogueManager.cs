@@ -17,35 +17,50 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
-        nameText = FindObjectOfType<LevelManager>().characterName;
-        dialogueText = FindObjectOfType<LevelManager>().lines;
-        dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
         baniak = FindObjectOfType<Baniak_Controler>();
+        Debug.Log("DialogueManager baniak set" + baniak);
+
+        sentences = new Queue<string>();
+        Debug.Log("DailogueManager sentences set: " + sentences);
+
+        nameText = FindObjectOfType<LevelManager>().characterName;
+        Debug.Log("DailogueManager nametext set: " + nameText);
+
+        dialogueText = FindObjectOfType<LevelManager>().lines;
+        Debug.Log("DailogueManager dialogueText set: " + dialogueText);
+
+        dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
+        Debug.Log("DailogueManager dialogueAnimator set: " + dialogueAnimator);
+
     }
 
     public void StartDialogue(NPCDialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.characterName);
+        Debug.Log("Dialogue Manager: Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
         nameText.text = dialogue.characterName;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
         {
+            Debug.Log("DialogueManager: enqueque sentence: " + sentence);
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
     {
+        Debug.Log("DisplayNextSentence: Display nest sentence started");
+        Debug.Log("DisplayNextSentence SETNENCES:" + sentences.Count);
         if (sentences.Count == 0)
         {
+            Debug.Log("sentences.Count == 0");
             EndDialogue();
             return;
         }
         string sentence = sentences.Dequeue();
         StopAllCoroutines(); //żeby nam się animacja nie zamknęła podczas przewijania tekstu
         StartCoroutine(TypeSentence(sentence));
+        Debug.Log("sentences.Count == "+sentences.Count);
     }
     IEnumerator TypeSentence(string sentence)
     {
@@ -59,9 +74,13 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("End of conversation");
+        Debug.Log("Endialogue Started");
         dialogueAnimator.SetBool("isOpen", false);
+        if(baniak != null){
+            baniak.state = Baniak_Controler.State.Moving;
+        }
+        GetComponent<NPC>().StopTalking();
         dialogueEnded = true;
-        baniak.state = Baniak_Controler.State.Moving;
+        Debug.Log("Endialogue Stopped");
     }
 }

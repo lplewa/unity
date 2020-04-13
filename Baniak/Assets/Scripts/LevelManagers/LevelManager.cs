@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public DialogueManager npc;
     public GameObject ui;
     public Text characterName;
     public Text lines;
@@ -15,6 +16,7 @@ public class LevelManager : MonoBehaviour
     public CoinPickup coinPickup;
     public CoinItem coin;
     public Portal portal;
+    public bool winCondition;
 
     private void Start()
     {
@@ -35,9 +37,12 @@ public class LevelManager : MonoBehaviour
         {
             if (storyItem.isFound)
             {
-                Destroy(inventoryItemContainer);
-                Destroy(inventoryItemContainer.gameObject);
-                Debug.Log("Destroyed " + inventoryItemContainer.item.itemName);
+                if(inventoryItemContainer != null)
+                {
+                    Destroy(inventoryItemContainer);
+                    Destroy(inventoryItemContainer.gameObject);
+                    Debug.Log("Destroyed " + inventoryItemContainer.item.itemName);
+                }
             }
         }
 

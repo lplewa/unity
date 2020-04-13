@@ -86,4 +86,20 @@ public class NPC : MonoBehaviour
         Debug.Log("StopTalking Stopped");
     }
 
+    public void AddRewardToInventory()
+    {
+        bool rewardPreviouslyAdded;
+        InventoryItem inventoryItem = FindObjectOfType<LevelManager>().storyItem;
+        Inventory inventory = FindObjectOfType<Inventory>();
+        if(inventory != null)
+        {
+            if (inventory.items.Contains(inventoryItem)) rewardPreviouslyAdded = true;
+            else rewardPreviouslyAdded = false;
+            if (dialogueManager.missionAccomplished && !rewardPreviouslyAdded)
+            {
+                inventory.Add(inventoryItem);
+                inventoryItem.isFound = true;
+            }
+        }
+    }
 }

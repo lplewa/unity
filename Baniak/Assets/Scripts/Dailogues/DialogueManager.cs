@@ -13,29 +13,28 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueEnded;
     public bool missionAccomplished;
     private Baniak_Controler baniak;
+    public string NPCName;
 
     // Start is called before the first frame update
     void Start()
     {
         baniak = FindObjectOfType<Baniak_Controler>();
-        Debug.Log("DialogueManager baniak set" + baniak);
 
         sentences = new Queue<string>();
-        Debug.Log("DailogueManager sentences set: " + sentences);
 
         nameText = FindObjectOfType<LevelManager>().characterName;
-        Debug.Log("DailogueManager nametext set: " + nameText);
 
         dialogueText = FindObjectOfType<LevelManager>().lines;
-        Debug.Log("DailogueManager dialogueText set: " + dialogueText);
-
+     
         dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
-        Debug.Log("DailogueManager dialogueAnimator set: " + dialogueAnimator);
+
+        NPCName = gameObject.name;
 
     }
 
     public void StartDialogue(NPCDialogue dialogue)
     {
+        gameObject.GetComponent<NPC>().AddRewardToInventory();
         Debug.Log("Dialogue Manager: Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
         nameText.text = dialogue.characterName;
@@ -82,5 +81,21 @@ public class DialogueManager : MonoBehaviour
         GetComponent<NPC>().StopTalking();
         dialogueEnded = true;
         Debug.Log("Endialogue Stopped");
+    }
+
+    public void SetupDialogueEnded()
+    {
+        DialoguesEndedCollector dialoguesEndedCollector =FindObjectOfType<DialoguesEndedCollector>();
+        if(dialoguesEndedCollector != null){
+            if (dialoguesEndedCollector.firstDialogueEnded.Contains(NPCName))
+            {
+                dialogueEnded = true;
+            }
+            if (dialoguesEndedCollector.missionsAccomplished.Contains(NPCName))
+            {
+                missionAccomplished = true;
+            }
+            
+        }
     }
 }

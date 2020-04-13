@@ -11,10 +11,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        GetComponent<DialogueManager>().SetupDialogueEnded();
         GetComponent<DialogueManager>().StartDialogue(FindDialogue());
-
-       // FindObjectOfType<DialogueManager>().StartDialogue(FindDialogue());
-
     }
 
     public NPCDialogue FindDialogue()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2545193732890140319}
   - component: {fileID: 2545193732890140318}
   - component: {fileID: 6201385517691115365}
+  - component: {fileID: 691742767578025651}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -60,3 +61,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 5
   coins: []
+--- !u!114 &691742767578025651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545193732890140313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5992be7735f32b0459a0e8e3467dc7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StoryNPCs: []

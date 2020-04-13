@@ -311,6 +311,11 @@ PrefabInstance:
       propertyPath: portal
       value: 
       objectReference: {fileID: 1131083946}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: npc
+      value: 
+      objectReference: {fileID: 1095460814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &302105924
@@ -1152,6 +1157,7 @@ MonoBehaviour:
   dialogueAnimator: {fileID: 0}
   dialogueEnded: 0
   missionAccomplished: 0
+  NPCName: 
 --- !u!114 &1095460815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2175,6 +2181,7 @@ MonoBehaviour:
   dialogueAnimator: {fileID: 0}
   dialogueEnded: 0
   missionAccomplished: 0
+  NPCName: 
 --- !u!114 &6124527101200724873
 MonoBehaviour:
   m_ObjectHideFlags: 0

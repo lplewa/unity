@@ -1683,6 +1683,7 @@ GameObject:
   - component: {fileID: 1014884803}
   - component: {fileID: 1014884802}
   - component: {fileID: 1014884801}
+  - component: {fileID: 1014884808}
   - component: {fileID: 1014884806}
   - component: {fileID: 1014884805}
   - component: {fileID: 1014884807}
@@ -1848,6 +1849,18 @@ MonoBehaviour:
   dialogueEnded: 0
   missionAccomplished: 0
   NPCName: 
+--- !u!114 &1014884808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014884800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900a592ddccdc13479cec6cfb74308cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1075772538
 PrefabInstance:
   m_ObjectHideFlags: 0

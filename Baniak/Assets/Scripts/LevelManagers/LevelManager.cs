@@ -45,7 +45,6 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
-
     }
 
     private void DestroyPreviouslyFoundCoin()

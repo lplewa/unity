@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Baniak_Controler;
 
 public class TavernManager : MonoBehaviour
 {
     private NPC[] npcs;
     public Portal portal;
+    public DialogueTrigger dialogueTrigger;
+    public NPC dialogueInfo;
+    public Baniak_Controler baniak;
+    public GameObject controlsHint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        controlsHint.transform.gameObject.SetActive(false);
+        dialogueInfo.transform.gameObject.SetActive(false);
         npcs = FindObjectsOfType<NPC>();
     }
 
@@ -23,6 +29,7 @@ public class TavernManager : MonoBehaviour
             if (CheckAllDialoguesEnded())
             {
                 SetPortalActive();
+                NemiPortalInfo();
             }
              }
     }
@@ -46,4 +53,15 @@ public class TavernManager : MonoBehaviour
         return ended;
     }
 
+    void NemiPortalInfo()
+    {
+        DialogueTrigger dialogueTrigger = dialogueInfo.GetComponent<DialogueTrigger>();
+        dialogueInfo.transform.gameObject.SetActive(true);
+        dialogueTrigger.dialogue.characterName = "Nemi";
+        dialogueTrigger.dialogue.sentences[0] = "To portal! Za każdym razem, kiedy będziesz go potrzebował, wciśnij P";
+        baniak.state = State.Talking;
+        dialogueInfo.StartTalking();
+        controlsHint.transform.gameObject.SetActive(true);
+
+    }
 }

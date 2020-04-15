@@ -18,7 +18,7 @@ public class DialogueTrigger : MonoBehaviour
     public NPCDialogue FindDialogue()
     {
         DialogueManager dialogueObject = GetComponent<DialogueManager>();
-        if (!dialogueObject.dialogueEnded) return dialogue;
+        if (!dialogueObject.missionStarted) return dialogue;
         else if (!dialogueObject.missionAccomplished) return missionNotAccomplishedDialogue;
         else return successDialogue;
     }

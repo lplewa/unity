@@ -1219,6 +1219,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 691742767578025651, guid: ca7cd72bb9545384bb6bce1227a3a144,
+        type: 3}
+      propertyPath: missionsAccomplished.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca7cd72bb9545384bb6bce1227a3a144, type: 3}
 --- !u!1 &1170092033
@@ -1532,7 +1537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
   missionAccomplished: 0
   NPCName: 
 --- !u!1001 &1367780593
@@ -3348,7 +3353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
   missionAccomplished: 0
   NPCName: 
 --- !u!4 &5281469842992498852

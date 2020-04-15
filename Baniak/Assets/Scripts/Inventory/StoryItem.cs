@@ -8,7 +8,7 @@ public class StoryItem : MonoBehaviour
 {
     public InventoryItem item;
     public NPC succesDialog;
-    private bool dialogueEnded;
+    private bool missionStarted;
     private Baniak_Controler baniak;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class StoryItem : MonoBehaviour
     {
         succesDialog = GetComponentInParent<NPC>();
         baniak = FindObjectOfType<Baniak_Controler>();
-        dialogueEnded = succesDialog.GetComponent<DialogueManager>().dialogueEnded;
+        missionStarted = succesDialog.GetComponent<DialogueManager>().missionStarted;
     }
 
     // Update is called once per frame
@@ -36,17 +36,22 @@ public class StoryItem : MonoBehaviour
 
     void Pickup()
     {
-        baniak.state = State.Talking;
-        SuccessMessage();
-        succesDialog.StartTalking();
-        Debug.Log("Pick up the item into inventory "+item.itemName);
-        bool wasPickedUp=Inventory.instance.Add(item);
-        if (wasPickedUp)
+        List<string> missionsStarted = FindObjectOfType<DialoguesEndedCollector>().startedMissions;
+        string NPCName = FindObjectOfType<LevelManager>().npc.gameObject.name;
+        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! " + NPCName);
+        if (missionsStarted.Contains(NPCName))
         {
-            item.isFound = true;
-            Destroy(gameObject);
+            baniak.state = State.Talking;
+            SuccessMessage();
+            succesDialog.StartTalking();
+            Debug.Log("Pick up the item into inventory " + item.itemName);
+            bool wasPickedUp = Inventory.instance.Add(item);
+            if (wasPickedUp)
+            {
+                item.isFound = true;
+                Destroy(gameObject);
+            }
         }
-   
     }
 
     void SuccessMessage()

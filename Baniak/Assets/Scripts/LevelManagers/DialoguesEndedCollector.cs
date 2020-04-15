@@ -22,12 +22,12 @@ public class DialoguesEndedCollector : MonoBehaviour
     #endregion
 
   //  public int space = 5;
-    public List<string> firstDialogueEnded;
+    public List<string> startedMissions;
     public List<string> missionsAccomplished;
 
     void Start()
     {
-        firstDialogueEnded = new List<string>();
+        startedMissions = new List<string>();
         missionsAccomplished = new List<string>();
     }
 
@@ -45,13 +45,13 @@ public class DialoguesEndedCollector : MonoBehaviour
             if (levelManager.npc != null)
             {
                 DialogueManager dialogueManager = levelManager.npc;
-                bool dialogueEnded = dialogueManager.dialogueEnded;
+                bool dialogueEnded = dialogueManager.missionStarted;
                 string NPCName = dialogueManager.gameObject.name;
                 bool shouldBeAdded = true;
-                if (firstDialogueEnded.Contains(NPCName)) shouldBeAdded = false;
+                if (startedMissions.Contains(NPCName)) shouldBeAdded = false;
                 if (dialogueEnded && shouldBeAdded)
                 {
-                    firstDialogueEnded.Add(NPCName);
+                    startedMissions.Add(NPCName);
                 }
             }
         }
@@ -69,7 +69,7 @@ public class DialoguesEndedCollector : MonoBehaviour
             if (missionsAccomplished.Contains(NPCName)) shouldBeAdded = false;
             if (missionAccomplished && shouldBeAdded)
             {
-                firstDialogueEnded.Add(NPCName);
+                startedMissions.Add(NPCName);
             }
         }
     }

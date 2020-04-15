@@ -18,7 +18,7 @@ public class UrinalManager : MonoBehaviour
 
     private void Activate()
     {
-        if (dialogueManager.dialogueEnded)
+        if (dialogueManager.missionStarted)
         {
             var inactiveUrinals = Resources.FindObjectsOfTypeAll<Urinal>();
             if (inactiveUrinals.Length > 0)

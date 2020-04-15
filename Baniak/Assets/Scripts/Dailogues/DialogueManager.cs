@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     private Text dialogueText;
     public Queue<string> sentences;
     public Animator dialogueAnimator;
-    public bool dialogueEnded;
+    public bool missionStarted;
     public bool missionAccomplished;
     private Baniak_Controler baniak;
     public string NPCName;
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
             baniak.state = Baniak_Controler.State.Moving;
         }
         GetComponent<NPC>().StopTalking();
-        dialogueEnded = true;
+        missionStarted = true;
         Debug.Log("Endialogue Stopped");
     }
 
@@ -87,9 +87,9 @@ public class DialogueManager : MonoBehaviour
     {
         DialoguesEndedCollector dialoguesEndedCollector =FindObjectOfType<DialoguesEndedCollector>();
         if(dialoguesEndedCollector != null){
-            if (dialoguesEndedCollector.firstDialogueEnded.Contains(NPCName))
+            if (dialoguesEndedCollector.startedMissions.Contains(NPCName))
             {
-                dialogueEnded = true;
+                missionStarted = true;
             }
             if (dialoguesEndedCollector.missionsAccomplished.Contains(NPCName))
             {

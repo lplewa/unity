@@ -8,7 +8,7 @@ public class CoinPickup : MonoBehaviour
 
     public CoinItem coin;
     public NPC succesDialog;
-    private bool dialogueEnded;
+    private bool missionStarted;
     private Baniak_Controler baniak;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class CoinPickup : MonoBehaviour
     {
         succesDialog = GetComponentInParent<NPC>();
         baniak = FindObjectOfType<Baniak_Controler>();
-        dialogueEnded = succesDialog.GetComponent<DialogueManager>().dialogueEnded;
+        missionStarted = succesDialog.GetComponent<DialogueManager>().missionStarted;
         
     }
 
@@ -28,20 +28,24 @@ public class CoinPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PickupCoin();
+            PickupCoin();
     }
 
     void PickupCoin()
     {
-        baniak.state = State.Talking;
-        SuccessMessage();
-        succesDialog.StartTalking();
-        Debug.Log("Pick up the coin into inventory " + coin.coinName);
-        bool wasPickedUp = CoinCollector.instance.Add(coin);
-        if (wasPickedUp)
+        List<string> missionsStarted = FindObjectOfType<DialoguesEndedCollector>().startedMissions;
+        if (missionsStarted.Contains("Aunt"))
         {
-            coin.isFound = true;
-            Destroy(gameObject);
+            baniak.state = State.Talking;
+            SuccessMessage();
+            succesDialog.StartTalking();
+            Debug.Log("Pick up the coin into inventory " + coin.coinName);
+            bool wasPickedUp = CoinCollector.instance.Add(coin);
+            if (wasPickedUp)
+            {
+                coin.isFound = true;
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -50,4 +54,5 @@ public class CoinPickup : MonoBehaviour
         succesDialog.GetComponent<DialogueTrigger>().dialogue.characterName = "Baniak";
         succesDialog.GetComponent<DialogueTrigger>().dialogue.sentences[0] = "To moneta dla ciotki Claytona!";
     }
+
 }

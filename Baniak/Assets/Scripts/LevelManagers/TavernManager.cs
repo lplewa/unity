@@ -37,7 +37,7 @@ public class TavernManager : MonoBehaviour
         bool ended = true;
         foreach(NPC npc in npcs)
         {
-            if (!npc.GetComponent<DialogueManager>().dialogueEnded)
+            if (!npc.GetComponent<DialogueManager>().missionStarted)
             {
                 ended = false;
             }

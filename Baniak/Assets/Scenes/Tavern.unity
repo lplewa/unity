@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
+  hasDialogueVariants: 0
 --- !u!114 &169445795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +403,12 @@ MonoBehaviour:
     - "Zgubi\u0142em gdzie\u015B moj\u0105 sakiewk\u0119."
     - "Karmi\u0119 go\u0142\u0119bie! I mam szczura!"
     - "Chce Pan zobaczy\u0107?"
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &169445796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,7 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!1001 &178845306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1582,6 +1591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
+  hasDialogueVariants: 0
 --- !u!114 &451476955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,6 +1615,12 @@ MonoBehaviour:
     - "to si\u0119 spotkamy w mniej przyjemnych warunkach\u2026"
     - "Hmmm\u2026 ale brod\u0119 to masz Pan zaiste imponuj\u0105c\u0105\u2026"
     - "Nic to! Zmykaj, zaj\u0119ty jestem!"
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &451476956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1634,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!1 &564291383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
+  hasDialogueVariants: 0
 --- !u!114 &564291389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,6 +1787,12 @@ MonoBehaviour:
     sentences:
     - "Troch\u0119 tu zimno\u2026 a ja musz\u0119 jecha\u0107 do TJa."
     - Czemu do Niego? To nie Twoja sprawa!
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &564291390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +1806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!1 &598014891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
+  hasDialogueVariants: 0
 --- !u!114 &1042616974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,6 +3535,12 @@ MonoBehaviour:
     - "S\u0142uchaj przyjacielu, nie widzia\u0142e\u015B gdzie\u015B mojego katalogu?"
     - "Bardzo go potrzebuj\u0119, a nigdzie nie mog\u0119 go znale\u017A\u0107."
     - "Mo\u017Ce Filip b\u0119dzie mia\u0142 jakie\u015B wskaz\xF3wki."
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &1042616975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3520,7 +3554,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!1 &1087776286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4237,6 +4273,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 7.482636}
   m_EdgeRadius: 0
+--- !u!1 &1363377342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6051206528899585262, guid: d00581adf26460944ad9b134a1cd1b15,
+    type: 3}
+  m_PrefabInstance: {fileID: 247888075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1512750121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5634866308151914629, guid: 832ad16a6293c454b8a0e18fa187dcdb,
@@ -4256,6 +4298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 0
+  hasDialogueVariants: 0
 --- !u!114 &1512750123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,6 +4320,12 @@ MonoBehaviour:
       kilku rzeczy. "
     - "Wskaz\xF3wki gdzie je znajdziemy zdob\u0119dziesz od ch\u0142opak\xF3w."
     - "Pom\xF3\u017C im Micha\u0142, jeste\u015B ich jedyn\u0105 nadziej\u0105"
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &1512750124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,7 +4339,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!61 &1512750128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4438,6 +4489,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1867984122}
+  dialogueTrigger: {fileID: 1939955379}
+  dialogueInfo: {fileID: 1939955382}
+  baniak: {fileID: 7973813494917304066}
+  controlsHint: {fileID: 1363377342}
 --- !u!4 &1921046369
 Transform:
   m_ObjectHideFlags: 0
@@ -4452,6 +4507,91 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1939955378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939955380}
+  - component: {fileID: 1939955379}
+  - component: {fileID: 1939955381}
+  - component: {fileID: 1939955382}
+  m_Layer: 0
+  m_Name: PortalDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1939955379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939955378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b287b9239017b8646b291c6daf89964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    characterName: Nemi
+    sentences:
+    - 
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
+--- !u!4 &1939955380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939955378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16143571, y: 1.2484784, z: -0.09378389}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939955381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939955378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueAnimator: {fileID: 0}
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
+--- !u!114 &1939955382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939955378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRotating: 0
+  hasDialogueVariants: 0
 --- !u!114 &1968459114 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 845498767, guid: 49c9b0ef7b4309543a7072c6ea9d6a39,
@@ -4745,6 +4885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRotating: 1
+  hasDialogueVariants: 0
 --- !u!114 &2090376551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4767,6 +4908,12 @@ MonoBehaviour:
     - "Jednak nim rozpoczniemy podr\xF3\u017C, musz\u0119 znale\u017A\u0107 sw\xF3j
       kostur. "
     - "Widzia\u0142e\u015B go gdzie\u015B?"
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
 --- !u!114 &2090376552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4780,7 +4927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
 --- !u!1 &2147065060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,6 +5272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  movementSpeed: 4.5
   dialogue_Controler: {fileID: 0}
   state: 0
 --- !u!4 &8242810126090381692 stripped

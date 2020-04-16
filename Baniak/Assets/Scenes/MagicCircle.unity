@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
   missionAccomplished: 0
   NPCName: 
 --- !u!114 &1095460815
@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
   missionAccomplished: 0
   NPCName: 
 --- !u!114 &6124527101200724873

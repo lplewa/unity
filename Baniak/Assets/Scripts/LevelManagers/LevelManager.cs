@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     public CoinPickup coinPickup;
     public CoinItem coin;
     public Portal portal;
-    public bool winCondition;
+    public bool winPortalAvailable;
 
     private void Start()
     {

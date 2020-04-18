@@ -1522,6 +1522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 1
 --- !u!114 &1230537380
@@ -1669,6 +1670,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e044fb5ce57a2964daebfb528a2ee556,
         type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: winPortalAvailable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1368504903
@@ -2962,6 +2968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baniak
       objectReference: {fileID: 0}
+    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8455895843734671789, guid: c6fcce2aa641db441be9a8d2e54f8de0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3016,11 +3027,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1696060491006704675, guid: c6fcce2aa641db441be9a8d2e54f8de0,
         type: 3}
@@ -3383,6 +3389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 0
 --- !u!114 &5415540552007658704

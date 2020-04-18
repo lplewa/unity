@@ -6,37 +6,38 @@ using static Baniak_Controler;
 public class TavernManager : MonoBehaviour
 {
     private NPC[] npcs;
-    public Portal portal;
-    public DialogueTrigger dialogueTrigger;
+    public Portal portalPrefab;
     public NPC dialogueInfo;
+    public DialogueManager dialogueManager;
     public Baniak_Controler baniak;
     public GameObject controlsHint;
+    private bool portalInfoDisplayed;
 
     // Start is called before the first frame update
     void Start()
     {
         controlsHint.transform.gameObject.SetActive(false);
-        dialogueInfo.transform.gameObject.SetActive(false);
         npcs = FindObjectsOfType<NPC>();
+        portalInfoDisplayed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (!portal.transform.gameObject.active)
-        {
             if (CheckAllDialoguesEnded())
             {
-                SetPortalActive();
+                InstantinatePortal();
                 NemiPortalInfo();
             }
-             }
     }
 
-    void SetPortalActive()
+    void InstantinatePortal()
     {
-        portal.transform.gameObject.SetActive(true);
+        Portal portal = FindObjectOfType<Portal>();
+        if(portal==null)
+        {
+            Instantiate(portalPrefab, new Vector3(-1, 7, 0), Quaternion.identity);
+        }
     }
    
     bool CheckAllDialoguesEnded()
@@ -55,13 +56,12 @@ public class TavernManager : MonoBehaviour
 
     void NemiPortalInfo()
     {
-        DialogueTrigger dialogueTrigger = dialogueInfo.GetComponent<DialogueTrigger>();
-        dialogueInfo.transform.gameObject.SetActive(true);
-        dialogueTrigger.dialogue.characterName = "Nemi";
-        dialogueTrigger.dialogue.sentences[0] = "To portal! Za każdym razem, kiedy będziesz go potrzebował, wciśnij P";
-        baniak.state = State.Talking;
-        dialogueInfo.StartTalking();
-        controlsHint.transform.gameObject.SetActive(true);
-
+        if (!portalInfoDisplayed) {
+            dialogueManager.missionAccomplished = true;
+            baniak.state = State.Talking;
+            dialogueInfo.StartTalking();
+            controlsHint.transform.gameObject.SetActive(true);
+            portalInfoDisplayed = true;
+        }
     }
 }

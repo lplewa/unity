@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
             {
                 missionStarted = true;
             }
-            if (dialoguesEndedCollector.missionsAccomplished.Contains(NPCName))
+           if (dialoguesEndedCollector.missionsAccomplished.Contains(NPCName))
             {
                 missionAccomplished = true;
             }

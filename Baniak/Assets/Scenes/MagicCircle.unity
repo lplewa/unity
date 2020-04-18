@@ -466,6 +466,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6a980a7911877524286945dd61ca8193,
         type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: winPortalAvailable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &302105924
@@ -3263,6 +3268,7 @@ MonoBehaviour:
   answerOrder: {fileID: 305923873}
   dialogueManager: {fileID: 1095460814}
   puzzle: {fileID: 578145763}
+  answer: {fileID: 762585147}
 --- !u!114 &5493964203636626797
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -908,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 1
 --- !u!114 &567935427
@@ -2454,6 +2455,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fb34ef681ac6fb04cb9c552877f04bb1,
         type: 2}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: winPortalAvailable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1001 &3801241177831776447
@@ -2468,6 +2474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 3801241177507426552, guid: 718b0cb770042a64e9aae34e809e4a65,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 567935427}
     - target: {fileID: 3801241177507426553, guid: 718b0cb770042a64e9aae34e809e4a65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2578,11 +2589,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1056711159}
-    - target: {fileID: 3801241177507426552, guid: 718b0cb770042a64e9aae34e809e4a65,
-        type: 3}
-      propertyPath: dialogueManager
-      value: 
-      objectReference: {fileID: 567935427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718b0cb770042a64e9aae34e809e4a65, type: 3}
 --- !u!70 &4868563902619834931
@@ -2780,6 +2786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 0
 --- !u!1001 &8322093342223795569

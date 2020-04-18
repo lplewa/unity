@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged OnItemChangedCallback;
     public int space = 5;
-    public List<InventoryItem> items = new List<InventoryItem>(); 
+    public List<InventoryItem> items = new List<InventoryItem>();
+    public WinPortal winPortalPrefab;
 
     public bool Add(InventoryItem item)
     {
@@ -44,5 +46,36 @@ public class Inventory : MonoBehaviour
     {
         return instance;
     }
+
+    private void Start()
+    {
+        WinPortal winPortal = FindObjectOfType<WinPortal>();
+        if (winPortal != null)
+        {
+            Destroy(winPortal);
+        }
+    }
+
+    private void Update()
+    {
+        AllStoryItemsCollected();
+    }
+
+    public void AllStoryItemsCollected()
+    {
+        WinPortal winPortal = FindObjectOfType<WinPortal>();
+        if (items.Count == space)
+        {
+            if (winPortal == null)
+            {
+                LevelManager levelManager = FindObjectOfType<LevelManager>();
+                if(levelManager.winPortalAvailable)
+                {
+                    Instantiate(winPortalPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                }
+            }
+        }
+    }
+
 }
  

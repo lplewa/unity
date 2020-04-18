@@ -95,10 +95,13 @@ public class NPC : MonoBehaviour
         {
             if (inventory.items.Contains(inventoryItem)) rewardPreviouslyAdded = true;
             else rewardPreviouslyAdded = false;
-            if (dialogueManager.missionAccomplished && !rewardPreviouslyAdded)
+            if (inventoryItem != null)
             {
-                inventory.Add(inventoryItem);
-                inventoryItem.isFound = true;
+                if (dialogueManager.missionAccomplished && !rewardPreviouslyAdded)
+                {
+                    inventory.Add(inventoryItem);
+                    inventoryItem.isFound = true;
+                }
             }
         }
     }

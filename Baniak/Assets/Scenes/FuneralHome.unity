@@ -851,6 +851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baniak
       objectReference: {fileID: 0}
+    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
+        type: 3}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8455895843734671789, guid: c6fcce2aa641db441be9a8d2e54f8de0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -905,11 +910,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7973813493664950148, guid: c6fcce2aa641db441be9a8d2e54f8de0,
-        type: 3}
-      propertyPath: state
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6fcce2aa641db441be9a8d2e54f8de0, type: 3}
@@ -1831,6 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 1
 --- !u!114 &1014884807
@@ -1846,7 +1847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueAnimator: {fileID: 0}
-  dialogueEnded: 0
+  missionStarted: 0
   missionAccomplished: 0
   NPCName: 
 --- !u!114 &1014884808
@@ -2172,6 +2173,11 @@ PrefabInstance:
       propertyPath: npc
       value: 
       objectReference: {fileID: 1014884807}
+    - target: {fileID: 1113938399752746518, guid: 1bf8173ca2c8ced4cb963c42793fbe1e,
+        type: 3}
+      propertyPath: winPortalAvailable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf8173ca2c8ced4cb963c42793fbe1e, type: 3}
 --- !u!1 &1253597049

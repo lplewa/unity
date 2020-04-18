@@ -8,6 +8,7 @@ public class TJLevelManager : MonoBehaviour
     public AnswerOrder answerOrder;
     public DialogueManager dialogueManager;
     public Puzzle puzzle;
+    public Text answer;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class TJLevelManager : MonoBehaviour
         {
             button.GetComponent<Button>().interactable = true;
         }
+        answer.text = "";
     }
 
     void MissionComplete()

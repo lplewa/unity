@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 5
   items: []
+  winPortalPrefab: {fileID: 2362233129052333956, guid: 8e53435f548faea4c8e86780cd9ce2e2,
+    type: 3}
 --- !u!114 &6201385517691115365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,4 +75,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5992be7735f32b0459a0e8e3467dc7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StoryNPCs: []
+  startedMissions: []

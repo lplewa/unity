@@ -21,14 +21,14 @@ public class DialoguesEndedCollector : MonoBehaviour
     }
     #endregion
 
-  //  public int space = 5;
+   public int space = 5;
     public List<string> startedMissions;
-    public List<string> missionsAccomplished;
+   public List<string> missionsAccomplished;
 
     void Start()
     {
         startedMissions = new List<string>();
-        missionsAccomplished = new List<string>();
+       missionsAccomplished = new List<string>();
     }
 
     // Update is called once per frame

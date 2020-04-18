@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour
 {
     private DialogueManager dialogueManager;
     private NPCDialogue dialogue;
-    private bool dialogueStarted;
+    public bool dialogueStarted;
     public bool isRotating;
     public bool hasDialogueVariants;
 

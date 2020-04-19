@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
     public bool dialogueStarted;
     public bool isRotating;
     public bool hasDialogueVariants;
+    public Sprite avatar;
 
     private void Start()
     {

@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     public OnItemChanged OnItemChangedCallback;
     public int space = 5;
     public List<InventoryItem> items = new List<InventoryItem>();
-    public WinPortal winPortalPrefab;
+    public bool allStoryItemsCollected;
 
     public bool Add(InventoryItem item)
     {
@@ -47,14 +47,6 @@ public class Inventory : MonoBehaviour
         return instance;
     }
 
-    private void Start()
-    {
-        WinPortal winPortal = FindObjectOfType<WinPortal>();
-        if (winPortal != null)
-        {
-            Destroy(winPortal);
-        }
-    }
 
     private void Update()
     {
@@ -63,17 +55,16 @@ public class Inventory : MonoBehaviour
 
     public void AllStoryItemsCollected()
     {
-        WinPortal winPortal = FindObjectOfType<WinPortal>();
         if (items.Count == space)
         {
-            if (winPortal == null)
+           var winPortals = Resources.FindObjectsOfTypeAll<WinPortal>();
+            WinPortal winPortal;
+            if (winPortals.Length > 0)
             {
-                LevelManager levelManager = FindObjectOfType<LevelManager>();
-                if(levelManager.winPortalAvailable)
-                {
-                    Instantiate(winPortalPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-                }
+                winPortal = winPortals[0];
+                winPortal.gameObject.SetActive(true);
             }
+            allStoryItemsCollected = true;
         }
     }
 

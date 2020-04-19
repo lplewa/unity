@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     private Text nameText;
     private Text dialogueText;
+    public Image dialogueAvatar;
     public Queue<string> sentences;
     public Animator dialogueAnimator;
     public bool missionStarted;
@@ -25,8 +26,10 @@ public class DialogueManager : MonoBehaviour
         nameText = FindObjectOfType<LevelManager>().characterName;
 
         dialogueText = FindObjectOfType<LevelManager>().lines;
-     
+
         dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
+
+        dialogueAvatar = FindObjectOfType<LevelManager>().avatar;
 
         NPCName = gameObject.name;
 
@@ -37,6 +40,7 @@ public class DialogueManager : MonoBehaviour
         gameObject.GetComponent<NPC>().AddRewardToInventory();
         Debug.Log("Dialogue Manager: Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
+        dialogueAvatar.sprite = gameObject.GetComponent<NPC>().avatar;
         nameText.text = dialogue.characterName;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)

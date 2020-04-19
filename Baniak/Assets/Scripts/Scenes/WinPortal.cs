@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WinPortal : MonoBehaviour
 {
+    private void Start()
+    {
+        transform.gameObject.SetActive(false);        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

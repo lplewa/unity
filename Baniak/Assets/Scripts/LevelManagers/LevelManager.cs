@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public GameObject ui;
     public Text characterName;
     public Text lines;
+    public Image avatar;
     public Animator dialogueAnimator;
     public StoryItem inventoryItemContainer;
     public InventoryItem storyItem;
@@ -65,9 +66,15 @@ public class LevelManager : MonoBehaviour
     }
     private void ShowPortal()
     {
-        if (Input.GetKeyDown("p")&& portal!=null)
+        if (storyItem != null)
         {
-            portal.transform.gameObject.SetActive(true);
+            if (!FindObjectOfType<Inventory>().allStoryItemsCollected)
+            {
+                if (Input.GetKeyDown("p") && portal != null)
+                {
+                    portal.transform.gameObject.SetActive(true);
+                }
+            }
         }
     }
 }

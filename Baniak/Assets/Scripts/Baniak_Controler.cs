@@ -19,6 +19,7 @@ public class Baniak_Controler : MonoBehaviour
     private Vector2 face = Vector2.down;
     public Dialogue_controler dialogue_Controler = null;
     public State state;
+    private string direction;
 
 
     void Start()
@@ -27,13 +28,14 @@ public class Baniak_Controler : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         dialogue_Controler = GetComponent<Dialogue_controler>();
+        direction = "down";
+        animator.SetBool("Standing", true);
     }
 
     // Update is called once per frame
     private void Update()
     {
          if (state == State.Moving) {
-             //move();
             Move();
          }
 
@@ -57,30 +59,40 @@ public class Baniak_Controler : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         if (horizontalInput != 0)
         {
-            if (horizontalInput > 0) animator.SetInteger("MoveDirection", 2);
-            else animator.SetInteger("MoveDirection", 1);
-        }
-        if (verticalInput != 0)
-        {
-            if(verticalInput>0) animator.SetInteger("MoveDirection", 3);
-            else animator.SetInteger("MoveDirection", 4);
-        }
-    }
-    /*
-    public void startDialouge(Dialouge dialouge)
-    {
-        state = State.Talking;
-        this.dialogue_Controler.Start_dialogue(dialouge);
-    }*/
-
-    void talk()
-    {/*
-        if (Input.anyKeyDown) {
-            if (dialogue_Controler.NextSentence()) {
-                state = State.Moving;
+            animator.SetBool("Standing", false);
+            if (horizontalInput > 0)
+            {
+                animator.SetInteger("MoveDirection", 2);
+                direction = "right";
+            }
+            else
+            {
+                animator.SetInteger("MoveDirection", 1);
+                direction = "left";
             }
         }
-        */
+       else if (verticalInput != 0)
+        {
+            animator.SetBool("Standing", false);
+            if (verticalInput > 0)
+            {
+                animator.SetInteger("MoveDirection", 3);
+                direction = "up";
+            }
+            else
+            {
+                animator.SetInteger("MoveDirection", 4);
+                direction = "down";
+            } 
+        }
+        else
+        {
+            animator.SetBool("Standing", true);
+        }
+    }
+
+    void talk()
+    {
     }
 
 }

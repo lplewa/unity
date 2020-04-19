@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         gameObject.GetComponent<NPC>().AddRewardToInventory();
         Debug.Log("Dialogue Manager: Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
-        dialogueAvatar.sprite = gameObject.GetComponent<NPC>().avatar;
+        if (gameObject.GetComponent<NPC>().avatar != null) dialogueAvatar.sprite = gameObject.GetComponent<NPC>().avatar;
         nameText.text = dialogue.characterName;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)

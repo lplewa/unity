@@ -64,6 +64,11 @@ public class Inventory : MonoBehaviour
                 winPortal = winPortals[0];
                 winPortal.gameObject.SetActive(true);
             }
+            Portal portal = FindObjectOfType<Portal>();
+            if(portal!=null)
+            {
+                portal.transform.gameObject.SetActive(false);
+            }
             allStoryItemsCollected = true;
         }
     }

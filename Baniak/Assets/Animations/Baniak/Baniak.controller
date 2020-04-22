@@ -252,7 +252,7 @@ AnimatorStateTransition:
   m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 0
-  m_InterruptionSource: 0
+  m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101173157164557722
@@ -928,7 +928,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakMoveDown (4)
-  m_Speed: 0.5
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101701698904867272}
@@ -984,7 +984,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakIdleLeft
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101385789514117312}
@@ -1014,7 +1014,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakMoveLeft (1)
-  m_Speed: 0.5
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101657120840739848}
@@ -1044,7 +1044,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakIdleDown
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101055630342081534}
@@ -1074,7 +1074,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakMoveRight (2)
-  m_Speed: 0.5
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101478008903751716}
@@ -1130,7 +1130,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakIdleRight
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101071240237534832}
@@ -1160,7 +1160,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakMoveUp (3)
-  m_Speed: 0.5
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101430481748506660}
@@ -1216,7 +1216,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BaniakIdleUp
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101064752032626570}

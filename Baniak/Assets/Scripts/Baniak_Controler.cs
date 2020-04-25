@@ -15,7 +15,7 @@ public class Baniak_Controler : MonoBehaviour
     public float speed = 6.0f;
     public float movementSpeed = 4.5f;
     private Rigidbody2D rb = null;
-    private Animator animator = null;
+    public Animator animator = null;
     private Vector2 face = Vector2.down;
     public Dialogue_controler dialogue_Controler = null;
     public State state;
@@ -24,7 +24,6 @@ public class Baniak_Controler : MonoBehaviour
 
     void Start()
     {
-        state = State.Moving;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         dialogue_Controler = GetComponent<Dialogue_controler>();

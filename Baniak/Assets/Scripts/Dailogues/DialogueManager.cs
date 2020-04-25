@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     public string NPCName;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         baniak = FindObjectOfType<Baniak_Controler>();
 
@@ -37,7 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(NPCDialogue dialogue)
     {
-        gameObject.GetComponent<NPC>().AddRewardToInventory();
+        InventoryItem storyItem =FindObjectOfType<LevelManager>().storyItem;
+        if(storyItem!=null) gameObject.GetComponent<NPC>().AddRewardToInventory();
         Debug.Log("Dialogue Manager: Starting conversation with " + dialogue.characterName);
         dialogueAnimator.SetBool("isOpen", true);
         if (gameObject.GetComponent<NPC>().avatar != null) dialogueAvatar.sprite = gameObject.GetComponent<NPC>().avatar;

@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5634866308151914630}
   - component: {fileID: 5634866308151914631}
   - component: {fileID: 5634866308151914628}
+  - component: {fileID: 738207280087256842}
+  - component: {fileID: 3247350262890696874}
+  - component: {fileID: 3055796156925038213}
+  - component: {fileID: 2185527183318847767}
   m_Layer: 0
   m_Name: Nemi
   m_TagString: Untagged
@@ -99,3 +103,91 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &738207280087256842
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634866308151914629}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.35680628}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53125, y: 0.6875}
+    newSize: {x: 0.53125, y: 0.6875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.53125, y: 1.0823727}
+  m_EdgeRadius: 0
+--- !u!114 &3247350262890696874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634866308151914629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueStarted: 0
+  isRotating: 0
+  hasDialogueVariants: 1
+  avatar: {fileID: 21300000, guid: cfd14a59f7b05ca48b44a0c181e53902, type: 3}
+--- !u!114 &3055796156925038213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634866308151914629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b287b9239017b8646b291c6daf89964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    characterName: Nemi
+    sentences:
+    - "Micha\u0142? Czemu tak dziwnie na mnie patrzysz? Nie poznajesz mnie?"
+    - "Mniejsza\u2026 Musimy uratowa\u0107 ch\u0142opak\xF3w! "
+    - "Wiem jak to zrobi\u0107, ale b\u0119dziemy potrzebowali kilku rzeczy."
+    - "Wskaz\xF3wki gdzie je znajdziemy zdob\u0119dziesz od ch\u0142opak\xF3w."
+    - "Pom\xF3\u017C im Micha\u0142, jeste\u015B ich jedyn\u0105 nadziej\u0105"
+  missionNotAccomplishedDialogue:
+    characterName: Nemi
+    sentences:
+    - "Musimy uratowa\u0107 ch\u0142opak\xF3w! "
+  successDialogue:
+    characterName: Nemi
+    sentences:
+    - "To portal! Za ka\u017Cdym razem, kiedy b\u0119dziesz go potrzebowa\u0142, wci\u015Bnij
+      P"
+--- !u!114 &2185527183318847767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634866308151914629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueAvatar: {fileID: 0}
+  dialogueAnimator: {fileID: 0}
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 

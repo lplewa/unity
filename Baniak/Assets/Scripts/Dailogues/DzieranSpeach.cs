@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class DzieranSpeach : MonoBehaviour
 
-public class NPC : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public NPCDialogue dialogue;
@@ -20,17 +20,18 @@ public class NPC : MonoBehaviour
         Debug.Log("NPC dialogue set: " + dialogue);
         dialogueStarted = false;
         Debug.Log("NPC dialogue started set: " + dialogueStarted);
+        StartTalking();
     }
     private void Update()
     {
         if (dialogueStarted)
         {
             if (Input.GetKeyDown("space"))
-                   {
-                       this.dialogueManager.DisplayNextSentence();
-                   }
+            {
+                this.dialogueManager.DisplayNextSentence();
+            }
         }
-     
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,25 +43,25 @@ public class NPC : MonoBehaviour
     {
         StartTalking();
     }
-    
+
     private void OnCollisionExit2D(Collision2D collision)
     {
 
         StopTalking();
     }
-    
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         StopTalking();
     }
-    
+
     public void StartTalking()
     {
         if (isRotating)
         {
             GetComponent<Animator>().SetBool("Speaking", true);
         }
-        
+
         if (!hasDialogueVariants)
         {
             this.dialogueManager.StartDialogue(dialogue);
@@ -91,7 +92,7 @@ public class NPC : MonoBehaviour
         bool rewardPreviouslyAdded;
         InventoryItem inventoryItem = FindObjectOfType<LevelManager>().storyItem;
         Inventory inventory = FindObjectOfType<Inventory>();
-        if(inventory != null)
+        if (inventory != null)
         {
             if (inventory.items.Contains(inventoryItem)) rewardPreviouslyAdded = true;
             else rewardPreviouslyAdded = false;
@@ -106,3 +107,4 @@ public class NPC : MonoBehaviour
         }
     }
 }
+

@@ -3231,6 +3231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dzieran: {fileID: 8479090884637277653}
+  baniakText: {fileID: 1696060490584282282}
   baniak: {fileID: 7973813494917304066}
 --- !u!114 &1968459114 stripped
 MonoBehaviour:
@@ -3470,7 +3471,10 @@ GameObject:
   - component: {fileID: 3088752532963264566}
   - component: {fileID: 9076597899937918590}
   - component: {fileID: 7973813494917304066}
+  - component: {fileID: 1696060490584282282}
+  - component: {fileID: 1696060490584282281}
   - component: {fileID: 1696060490584282265}
+  - component: {fileID: 1696060490584282280}
   - component: {fileID: 1696060490584282278}
   m_Layer: 0
   m_Name: Baniak
@@ -3479,6 +3483,66 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1696060490584282280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696060490584282279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5091d5baba1be847a3b3a5eafc1befd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueAvatar: {fileID: 0}
+  dialogueAnimator: {fileID: 0}
+  missionStarted: 0
+  missionAccomplished: 0
+  NPCName: 
+--- !u!114 &1696060490584282281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696060490584282279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b287b9239017b8646b291c6daf89964d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    characterName: Baniak
+    sentences:
+    - "Wiem gdzie si\u0119 spotkamy!"
+    - "i zapewniam, \u017Ce tego po\u017Ca\u0142ujesz!!!"
+  missionNotAccomplishedDialogue:
+    characterName: 
+    sentences: []
+  successDialogue:
+    characterName: 
+    sentences: []
+--- !u!114 &1696060490584282282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696060490584282279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogue:
+    characterName: 
+    sentences: []
+  dialogueStarted: 0
+  isRotating: 0
+  hasDialogueVariants: 0
+  avatar: {fileID: 21300000, guid: d72a851b4a853be48b51b83412650706, type: 3}
 --- !u!114 &2723644602922212416
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
     public bool dialogueStarted;
     public bool isRotating;
     public bool hasDialogueVariants;
+    public bool dialogueStopped = false;
     public Sprite avatar;
 
     private void Start()
@@ -83,6 +84,7 @@ public class NPC : MonoBehaviour
         Debug.Log("End Collision");
         dialogueStarted = false;
         dialogueManager.dialogueAnimator.SetBool("isOpen", false);
+        dialogueStopped = true;
         Debug.Log("StopTalking Stopped");
     }
 
@@ -104,5 +106,10 @@ public class NPC : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool GetDialogueStopped()
+    {
+        return dialogueStopped;
     }
 }

@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     public bool missionAccomplished;
     private Baniak_Controler baniak;
     public string NPCName;
+    public bool dialogueEnded;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,6 +45,7 @@ public class DialogueManager : MonoBehaviour
         if (gameObject.GetComponent<NPC>().avatar != null) dialogueAvatar.sprite = gameObject.GetComponent<NPC>().avatar;
         nameText.text = dialogue.characterName;
         sentences.Clear();
+        dialogueEnded = false;
         foreach (string sentence in dialogue.sentences)
         {
             Debug.Log("DialogueManager: enqueque sentence: " + sentence);
@@ -85,7 +87,9 @@ public class DialogueManager : MonoBehaviour
         }
         GetComponent<NPC>().StopTalking();
         missionStarted = true;
-        Debug.Log("Endialogue Stopped");
+        dialogueEnded = true;
+        Debug.Log("End dialogue Stopped");
+
     }
 
     public void SetupDialogueEnded()

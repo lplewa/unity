@@ -8,47 +8,83 @@ public class EmptyTavernManager : MonoBehaviour
     public NPC dzieran;
     public NPC baniakText;
     public Baniak_Controler baniak;
-    private bool dzieranSpoken;
-    private bool baniakAnswered;
+    public Animator dialogueAnimator;
+    public ActiveDailogue activeDailogue;
+    public enum ActiveDailogue
+    {
+        DzieranSpeach,
+        BaniakResponse,
+        DzieranResponse,
+        AllDailoguesStopped
+    }
+    private bool dzieranSpeachStarted;
+    private bool baniakResponseStarted;
+    private bool dzieranResponseStarted;
 
     public void Start()
     {
-        dzieranSpoken = false;
-        baniakAnswered = false;
+        dzieranSpeachStarted = false;
+        baniakResponseStarted = false;
+        dzieranResponseStarted = false;
+        activeDailogue = ActiveDailogue.DzieranSpeach;
+        dialogueAnimator = FindObjectOfType<LevelManager>().dialogueAnimator;
     }
 
     private void Update()
     {
-        DzieranSpeach();
-       BaniakResponse();
-        MoveToGamesRoom();
+        ManageScene();
     }
 
     private void DzieranSpeach()
     {
-        if (!dzieran.dialogueManager.missionStarted && !dzieranSpoken)
+        if(!dzieranSpeachStarted)
         {
+            dzieranSpeachStarted = true;
             baniak.state = State.Talking;
             dzieran.StartTalking();
-            dzieranSpoken = true;
-                    }
+        }
+        if (dzieran.dialogueStopped)
+        {
+            activeDailogue = ActiveDailogue.BaniakResponse;
+        }
     }
 
     private void BaniakResponse()
     {
-        if (dzieranSpoken && !baniakAnswered && dzieran.dialogueManager.missionStarted)
+        if (!baniakResponseStarted)
         {
+            baniakResponseStarted = true;
+            dzieran.dialogueStopped = false;
             baniak.state = State.Talking;
             baniakText.StartTalking();
-            baniakAnswered = true;
         }
+        if (baniakText.dialogueStopped) activeDailogue = ActiveDailogue.DzieranResponse;
+    }
+
+    private void DzieranResponse()
+    {
+        if (!dzieranResponseStarted)
+        {
+            dzieranResponseStarted = true;
+            baniak.state = State.Talking;
+            dzieran.StartTalking();
+        }
+        if (dzieran.dialogueStopped) activeDailogue = ActiveDailogue.AllDailoguesStopped;
     }
 
     private void MoveToGamesRoom()
     {
-        if(dzieran.dialogueManager.missionStarted && baniakText.dialogueManager.missionStarted)
-        {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Games Room Fight");
-        }
     }
+
+    private void ManageScene()
+    {
+        if (activeDailogue == ActiveDailogue.DzieranSpeach) DzieranSpeach();
+        else if (activeDailogue == ActiveDailogue.BaniakResponse) BaniakResponse();
+        else if (activeDailogue == ActiveDailogue.DzieranResponse) DzieranResponse();
+        else if (activeDailogue == ActiveDailogue.AllDailoguesStopped) MoveToGamesRoom();
+    }
+
+
+
 }

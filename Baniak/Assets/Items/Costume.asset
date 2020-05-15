@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Kostur
   icon: {fileID: 21300002, guid: acb36014fdc42ec47b0907fea4826d84, type: 3}
-  isFound: 1
+  isFound: 0

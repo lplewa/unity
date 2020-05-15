@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 567935425}
   - component: {fileID: 567935424}
   m_Layer: 0
-  m_Name: Apominus
+  m_Name: Aponimus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,14 +882,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    characterName: Apominus
+    characterName: Aponimus
     sentences:
     - "Witaj w\u0119drowcze, co przywiod\u0142o Ci\u0119 w me progi?"
     - "Aaaach, przys\u0142a\u0142 Ci\u0119 m\xF3j bratanek. Odpowiedz pierw na moj\u0105
       zagadk\u0119,"
     - "a obiecuj\u0119, \u017Ce zostaniesz godziwie wynagrodzony "
   missionNotAccomplishedDialogue:
-    characterName: Apominus
+    characterName: Aponimus
     sentences:
     - "Otw\xF3rz oczy zagubiony w\u0119drowcze, nie b\u0142\u0105d\u017A na \u015Blepo."
   successDialogue:
@@ -908,9 +908,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogue:
+    characterName: 
+    sentences: []
   dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 1
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: 082107fdea44a2440822fdbd5ca177a7, type: 3}
 --- !u!114 &567935427
 MonoBehaviour:
@@ -929,6 +934,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!114 &567935428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,6 +2835,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!1 &4868563902797827722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,9 +2882,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogue:
+    characterName: 
+    sentences: []
   dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 0
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: d72a851b4a853be48b51b83412650706, type: 3}
 --- !u!1001 &8322093342223795569
 PrefabInstance:

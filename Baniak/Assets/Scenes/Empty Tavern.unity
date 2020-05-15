@@ -3233,6 +3233,10 @@ MonoBehaviour:
   dzieran: {fileID: 8479090884637277653}
   baniakText: {fileID: 1696060490584282282}
   baniak: {fileID: 7973813494917304066}
+  dzieranStartedFirstDialogue: 0
+  dzieranStoppedFirstDialogue: 0
+  baniakAnswered: 0
+  dzieranResponsed: 0
 --- !u!114 &1968459114 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 845498767, guid: 49c9b0ef7b4309543a7072c6ea9d6a39,
@@ -3415,10 +3419,10 @@ MonoBehaviour:
     - "Wszystkie te chwile zostan\u0105 stracone w czasie... jak \u0142zy w deszczu.
       Pora umiera\u0107 "
     - "Ale znaj m\u0105 \u0142ask\u0119, wybierz miejsce swojej \u015Bmierci. "
-    - "Znasz zasady, dw\xF3ch wchodzi, jeden wychodzi"
   missionNotAccomplishedDialogue:
-    characterName: 
-    sentences: []
+    characterName: Dzieran
+    sentences:
+    - "Znasz zasady, dw\xF3ch wchodzi, jeden wychodzi"
   successDialogue:
     characterName: 
     sentences: []
@@ -3500,6 +3504,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!114 &1696060490584282281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3541,7 +3546,8 @@ MonoBehaviour:
     sentences: []
   dialogueStarted: 0
   isRotating: 0
-  hasDialogueVariants: 0
+  hasDialogueVariants: 1
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: d72a851b4a853be48b51b83412650706, type: 3}
 --- !u!114 &2723644602922212416
 MonoBehaviour:
@@ -3560,6 +3566,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!212 &3088752532963264566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3867,7 +3874,8 @@ MonoBehaviour:
     sentences: []
   dialogueStarted: 0
   isRotating: 0
-  hasDialogueVariants: 0
+  hasDialogueVariants: 1
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: 590d51bc9bc694a4e86f8dd4c424b04a, type: 3}
 --- !u!95 &9076597899937918590
 Animator:

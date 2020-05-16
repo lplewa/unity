@@ -689,7 +689,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Wie\u017Ca Apominusa"
+  m_text: "Wie\u017Ca Aponimusa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcdea80761047ab4cac7eb5621d49a73, type: 2}
   m_sharedMaterial: {fileID: 21097636571674494, guid: fcdea80761047ab4cac7eb5621d49a73,

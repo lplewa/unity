@@ -72,9 +72,11 @@ public class EmptyTavernManager : MonoBehaviour
         if (dzieran.dialogueStopped) activeDailogue = ActiveDailogue.AllDailoguesStopped;
     }
 
-    private void MoveToGamesRoom()
+   IEnumerator MoveToGamesRoom()
     {
+        yield return new WaitForSeconds(1f);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Games Room Fight");
+ 
     }
 
     private void ManageScene()
@@ -82,7 +84,7 @@ public class EmptyTavernManager : MonoBehaviour
         if (activeDailogue == ActiveDailogue.DzieranSpeach) DzieranSpeach();
         else if (activeDailogue == ActiveDailogue.BaniakResponse) BaniakResponse();
         else if (activeDailogue == ActiveDailogue.DzieranResponse) DzieranResponse();
-        else if (activeDailogue == ActiveDailogue.AllDailoguesStopped) MoveToGamesRoom();
+        else if (activeDailogue == ActiveDailogue.AllDailoguesStopped) StartCoroutine(MoveToGamesRoom());
     }
 
 

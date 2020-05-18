@@ -26,6 +26,10 @@ public class BattleSystem : MonoBehaviour
     public GameObject blanketButton;
 
     public GameObject costure;
+    public GameObject blanket;
+    public GameObject apart;
+    public GameObject beard;
+    public GameObject coins;
 
     // Start is called before the first frame update
     void Start()
@@ -91,6 +95,10 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerCoinsAttack()
     {
         SetButtonsActive(false);
+        coins.SetActive(true);
+        coins.GetComponent<Animator>().SetBool("coins", true);
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(EnemyCoinHypnotizedAnimation());
         dialogueText.text = "Dzieran liczy monety! Kolejna moja tura!";
         yield return new WaitForSeconds(2f);
         state = BattleState.PlayerTurn;
@@ -103,6 +111,11 @@ public class BattleSystem : MonoBehaviour
         bool isDead=enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHealthPoints(enemyUnit.currentHealthPoints);
         dialogueText.text = "Plaskacz z apartu raz!";
+        apart.SetActive(true);
+        apart.GetComponent<Animator>().SetBool("apart", true);
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(EnemyDamageAnimation());
+        Destroy(apart);
         yield return new WaitForSeconds(2f);
         if (isDead)
         {
@@ -118,11 +131,15 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerBeardAttack()
     {
         SetButtonsActive(false);
-        dialogueText.text = "Epicki rzut brodą...";
+        dialogueText.text = "Epicki rzut brodą!";
+        beard.SetActive(true);
+        beard.GetComponent<Animator>().SetBool("beard", true);
         yield return new WaitForSeconds(2f);
-        dialogueText.text = "Chyba nie zadziałało...";
+        dialogueText.text = "Ups... Chyba nie zadziałało...";
+        yield return new WaitForSeconds(1.5f);
         state = BattleState.EnemyTurn;
         StartCoroutine(EnemyTurn());
+        Destroy(beard);
     }
 
     IEnumerator PlayerBlanketAttack()
@@ -131,9 +148,16 @@ public class BattleSystem : MonoBehaviour
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         playerUnit.currentHealthPoints += 2;
         dialogueText.text = "Poczuj ciepło tego koca!";
+        blanket.SetActive(true);
+        blanket.GetComponent<Animator>().SetBool("blanket", true);
         enemyHUD.SetHealthPoints(enemyUnit.currentHealthPoints);
         playerHUD.SetHealthPoints(playerUnit.currentHealthPoints);
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(EnemyDamageAnimation());
+        Destroy(blanket);
         yield return new WaitForSeconds(2f);
+
+
         if (isDead)
         {
             state = BattleState.Won;
@@ -154,8 +178,9 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Kostur leci!!!";
         costure.SetActive(true);
         costure.GetComponent<Animator>().SetBool("costure", true);
-        yield return new WaitForSeconds(1.1f);
-        Destroy(costure);
+        yield return new WaitForSeconds(0.75f);
+        StartCoroutine(EnemyDamageAnimation());
+        yield return new WaitForSeconds(2f);
         if (isDead)
         {
             state = BattleState.Won;
@@ -182,6 +207,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+        DzieranHypnotizedEvent();
         dialogueText.text = enemyUnit.unitName + " atakuje";
         yield return new WaitForSeconds(1f);
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
@@ -211,5 +237,31 @@ public class BattleSystem : MonoBehaviour
         {
             button.interactable = isActive;
         }
+    }
+
+    
+IEnumerator EnemyDamageAnimation()
+    {
+        DzieranHypnotizedEvent();
+        enemyUnit.GetComponent<Animator>().SetBool("hit", true);
+        dialogueText.text = "Musiało boleć";
+        yield return new WaitForSeconds(1.5f);
+        enemyUnit.GetComponent<Animator>().SetBool("hit", false);
+    }
+
+    private void DzieranHypnotizedEvent()
+    {
+        bool isHypnotized = enemyUnit.GetComponent<Animator>().GetBool("coinHypnotized");
+        if (isHypnotized)
+        {
+            Destroy(coins);
+            enemyUnit.GetComponent<Animator>().SetBool("coinHypnotized", false);
+        }
+    }
+
+    IEnumerator EnemyCoinHypnotizedAnimation()
+    {
+        enemyUnit.GetComponent<Animator>().SetBool("coinHypnotized", true);
+        yield return new WaitForSeconds(1.5f);
     }
 }

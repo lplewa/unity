@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class StartScreenActions : MonoBehaviour
 {
- public void StartGame()
+    private void Start()
+    {
+        AudioSource audiosource = FindObjectOfType<AudioSource>();
+        if(audiosource!=null) Destroy(audiosource);
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene("Intro");
     }
@@ -14,4 +20,5 @@ public class StartScreenActions : MonoBehaviour
         Application.Quit();
     }
 
+    
 }

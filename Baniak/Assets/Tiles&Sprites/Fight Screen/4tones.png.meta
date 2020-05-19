@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 6f4e1d51d8a012c46aca23226c78c2bd
+guid: 4187f36d894ad694b9bfec642c69c573
 TextureImporter:
   fileIDToRecycleName:
-    21300000: DzieranFury_0
-    21300002: DzieranFury_1
-    21300004: DzieranFury_2
-    21300006: DzieranFury_3
-    21300008: DzieranFury_4
-    21300010: DzieranFury_5
-    21300012: DzieranFury_6
-    21300014: DzieranFury_7
-    21300016: DzieranFury_8
+    21300000: 4tones_0
+    21300002: 4tones_1
+    21300004: 4tones_2
+    21300006: 4tones_3
+    21300008: 4tones_4
+    21300010: 4tones_5
+    21300012: 4tones_6
+    21300014: 4tones_7
+    21300016: 4tones_8
+    21300018: 4tones_9
+    21300020: 4tones_10
+    21300022: 4tones_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -104,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DzieranFury_0
+      name: 4tones_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 192
-        height: 192
+        y: 600
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 610627fff475a9742a6a07758448ca86
+      spriteID: e2fe2a7809b0df94b9a7f5da547f6877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_1
+      name: 4tones_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
-        width: 192
-        height: 192
+        x: 200
+        y: 600
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,19 +141,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0858a75056149c46a8f0aba1ede6d92
+      spriteID: aea785d0e67beca4bb9914f76f52d27e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_2
+      name: 4tones_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 192
-        height: 192
+        x: 400
+        y: 600
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,19 +161,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da6e81422f6e30a4fb5445d8b7dc3333
+      spriteID: 3e936868c0d71fe4eaec1b93fefa6dd4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_3
+      name: 4tones_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 192
-        height: 192
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,19 +181,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec46a275cc7306746823f24611ddf536
+      spriteID: 812699df71a554448b1555ef9351bca4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_4
+      name: 4tones_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
+        x: 200
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,19 +201,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412f62ad232634045b0071d4c5d7c655
+      spriteID: 080d9cd2eb0c8a84ebf5b3d3123aca29
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_5
+      name: 4tones_5
       rect:
         serializedVersion: 2
-        x: 384
-        y: 192
-        width: 192
-        height: 192
+        x: 400
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,19 +221,79 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e69274324c4a14488a105cfeb33f5b5
+      spriteID: 6687d0df981d98245bd01ded0c180049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_6
+      name: 4tones_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68f98729091f364889a7ce65f6dcba7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4tones_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af706103e5cda5b45b05c668abc86a0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4tones_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8f2d65acc5d1b4d9623f03ac57d225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4tones_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,19 +301,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6b0edea21358f4a99079a0d567d9ca
+      spriteID: 199218cb716026f4da0d0b8a102124cd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_7
+      name: 4tones_10
       rect:
         serializedVersion: 2
-        x: 192
+        x: 200
         y: 0
-        width: 192
-        height: 192
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,19 +321,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c954de90d2f1b64aac797795abfc76a
+      spriteID: 94139ae44c5d8f045b23bae20841679f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DzieranFury_8
+      name: 4tones_11
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 0
-        width: 192
-        height: 192
+        width: 200
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b98f6e19e04dae4a853d97c9ea91a65
+      spriteID: 6554bb89a82fa2249a6bdcbaee6f3b9f
       vertices: []
       indices: 
       edges: []
@@ -286,7 +349,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 98f379bdd6077144b9d1c8d33e4bbdc2
+    spriteID: 311f464acf2e3e846a483b1174e9467c
     vertices: []
     indices: 
     edges: []

@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Games Room Fight.unity
     guid: 638ed4e5bf3be824ca81a4f9292c736b
+  - enabled: 1
+    path: Assets/Scenes/BattleLost.unity
+    guid: 498be73ab4f180f4ab9be6e27ef0b43a
   m_configObjects: {}

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleState {Start, PlayerTurn, EnemyTurn, Won, Lost}
@@ -30,6 +31,9 @@ public class BattleSystem : MonoBehaviour
     public GameObject apart;
     public GameObject beard;
     public GameObject coins;
+    public GameObject tones;
+
+    private bool coinsThrown;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +42,7 @@ public class BattleSystem : MonoBehaviour
        if (inventory != null) Destroy(inventory.gameObject);
         state = BattleState.Start;
         StartCoroutine(SetupBattle());
+        coinsThrown = false;
     }
 
      IEnumerator SetupBattle()
@@ -101,6 +106,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(EnemyCoinHypnotizedAnimation());
         dialogueText.text = "Dzieran liczy monety! Kolejna moja tura!";
         yield return new WaitForSeconds(2f);
+        coinsThrown = true;
         state = BattleState.PlayerTurn;
         PlayerTurn();
     }
@@ -125,7 +131,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.EnemyTurn;
-            StartCoroutine(EnemyTurn());
+            StartCoroutine(EnemyThunderEyesAttack());
         }
     }
     IEnumerator PlayerBeardAttack()
@@ -138,7 +144,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Ups... Chyba nie zadziałało...";
         yield return new WaitForSeconds(1.5f);
         state = BattleState.EnemyTurn;
-        StartCoroutine(EnemyTurn());
+        StartCoroutine(EnemyFourTonesAttack());
         Destroy(beard);
     }
 
@@ -146,7 +152,7 @@ public class BattleSystem : MonoBehaviour
     {
         SetButtonsActive(false);
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-        playerUnit.currentHealthPoints += 2;
+        playerUnit.currentHealthPoints += 1;
         dialogueText.text = "Poczuj ciepło tego koca!";
         blanket.SetActive(true);
         blanket.GetComponent<Animator>().SetBool("blanket", true);
@@ -166,7 +172,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.EnemyTurn;
-            StartCoroutine(EnemyTurn());
+            StartCoroutine(EnemyFourTonesAttack());
         }
     }
 
@@ -175,7 +181,7 @@ public class BattleSystem : MonoBehaviour
         SetButtonsActive(false);
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHealthPoints(enemyUnit.currentHealthPoints);
-        dialogueText.text = "Kostur leci!!!";
+        dialogueText.text = "Rzut kosturem!!!";
         costure.SetActive(true);
         costure.GetComponent<Animator>().SetBool("costure", true);
         yield return new WaitForSeconds(0.75f);
@@ -189,7 +195,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.EnemyTurn;
-            StartCoroutine(EnemyTurn());
+            StartCoroutine(EnemyThunderEyesAttack());
         }
     }
 
@@ -202,28 +208,53 @@ public class BattleSystem : MonoBehaviour
         else if(state==BattleState.Lost)
         {
             dialogueText.text = "Przegrałeś!";
+            StartCoroutine(GoToLostScreen());
         }
     }
 
-    IEnumerator EnemyTurn()
+   IEnumerator GoToLostScreen()
     {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("BattleLost");
+    }
+
+    IEnumerator EnemyFourTonesAttack()
+    {
+        float tonesYPosition = tones.transform.position.y;
+ 
         DzieranHypnotizedEvent();
-        dialogueText.text = enemyUnit.unitName + " atakuje";
+        dialogueText.text = enemyUnit.unitName + " i jego cztery tony nacisku!";
+        enemyUnit.GetComponent<Animator>().SetBool("4tones", true);
         yield return new WaitForSeconds(1f);
+        tones.SetActive(true);
+        tones.GetComponent<Animator>().SetBool("4tones", true);
+        yield return new WaitForSeconds(1.4f);
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
         playerHUD.SetHealthPoints(playerUnit.currentHealthPoints);
-        yield return new WaitForSeconds(1f);
-        if (isDead)
-        {
-            state = BattleState.Lost;
-            EndBattle();
-        }
-        else
-        {
-            state = BattleState.PlayerTurn;
-            PlayerTurn();
-        }
+        tones.SetActive(false);
+        enemyUnit.GetComponent<Animator>().SetBool("4tones", false);
+        tones.transform.position = tones.transform.position + new Vector3(0f, -tonesYPosition, 0);
+
+        StartCoroutine(PlayerDamageAnimation());
+        yield return new WaitForSeconds(3f);
+        SetNewBattleState(isDead);
     }
+
+    IEnumerator EnemyThunderEyesAttack()
+    {
+        DzieranHypnotizedEvent();
+        dialogueText.text = enemyUnit.unitName + " piorunuje wzrokiem!";
+        enemyUnit.GetComponent<Animator>().SetBool("eyeThunder", true);
+        yield return new WaitForSeconds(3f);
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        playerHUD.SetHealthPoints(playerUnit.currentHealthPoints);
+        enemyUnit.GetComponent<Animator>().SetBool("eyeThunder", false);
+        StartCoroutine(PlayerDamageAnimation());
+        yield return new WaitForSeconds(3f);
+        SetNewBattleState(isDead);
+    }
+
+
 
     private void RemoveButton(GameObject button)
     {
@@ -235,7 +266,13 @@ public class BattleSystem : MonoBehaviour
     {
         foreach (Button button in attackButtons)
         {
-            button.interactable = isActive;
+            if (isActive)
+            {
+                if (coinsThrown) button.interactable = true;
+                else if (button.GetComponent<BattleButtons>().startButton) button.interactable = true;
+                else button.interactable = false;
+            }
+            else button.interactable = false;
         }
     }
 
@@ -247,6 +284,14 @@ IEnumerator EnemyDamageAnimation()
         dialogueText.text = "Musiało boleć";
         yield return new WaitForSeconds(1.5f);
         enemyUnit.GetComponent<Animator>().SetBool("hit", false);
+    }
+
+    IEnumerator PlayerDamageAnimation()
+    {
+        playerUnit.GetComponent<Animator>().SetBool("hit", true);
+        yield return new WaitForSeconds(1f);
+        playerUnit.GetComponent<Animator>().SetBool("hit", false);
+        dialogueText.text = "Ałć!";
     }
 
     private void DzieranHypnotizedEvent()
@@ -264,4 +309,19 @@ IEnumerator EnemyDamageAnimation()
         enemyUnit.GetComponent<Animator>().SetBool("coinHypnotized", true);
         yield return new WaitForSeconds(1.5f);
     }
+
+    public void SetNewBattleState(bool isDead)
+    {
+        if (isDead)
+        {
+            state = BattleState.Lost;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.PlayerTurn;
+            PlayerTurn();
+        }
+    }
+
 }

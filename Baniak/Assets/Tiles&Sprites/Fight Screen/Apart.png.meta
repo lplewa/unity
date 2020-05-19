@@ -1,32 +1,28 @@
 fileFormatVersion: 2
-guid: 93e5d61d8e8c3cc4caecc21a412694f2
+guid: 6b400523de2b8a94d8272c9b46ba3936
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dzieranBig_0
-    21300002: dzieranBig_1
-    21300004: dzieranBig_2
-    21300006: dzieranBig_3
-    21300008: dzieranBig_4
-    21300010: dzieranBig_5
-    21300012: dzieranBig_6
-    21300014: dzieranBig_7
-    21300016: dzieranBig_8
-    21300018: dzieranBig_9
-    21300020: dzieranBig_10
-    21300022: dzieranBig_11
-    21300024: dzieranBig_12
-    21300026: dzieranBig_13
-    21300028: dzieranBig_14
-    21300030: dzieranBig_15
-    21300032: dzieranBig_16
-    21300034: dzieranBig_17
-    21300036: dzieranBig_18
-    21300038: dzieranBig_19
-    21300040: dzieranBig_20
-    21300042: dzieranBig_21
-    21300044: dzieranBig_22
-    21300046: dzieranBig_23
-    21300048: dzieranBig_24
+    21300000: Apart_0
+    21300002: Apart_1
+    21300004: Apart_2
+    21300006: Apart_3
+    21300008: Apart_4
+    21300010: Apart_5
+    21300012: Apart_6
+    21300014: Apart_7
+    21300016: Apart_8
+    21300018: Apart_9
+    21300020: Apart_10
+    21300022: Apart_11
+    21300024: Apart_12
+    21300026: Apart_13
+    21300028: Apart_14
+    21300030: Apart_15
+    21300032: Apart_16
+    21300034: Apart_17
+    21300036: Apart_18
+    21300038: Apart_19
+    21300040: Apart_20
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -120,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dzieranBig_0
+      name: Apart_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 222
-        width: 54
-        height: 81
+        x: 66
+        y: 1218
+        width: 72
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17e7472b85e665949aeedd6cbb8a3925
+      spriteID: 7b67b547d5d68bd4db42df6c67316ee5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_1
+      name: Apart_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 222
-        width: 54
-        height: 81
+        x: 258
+        y: 1218
+        width: 72
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,19 +150,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45a4f450336f87647a963e2e4e0edda6
+      spriteID: 21bfbca1c2978bc49b13c41e9f10c04a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_2
+      name: Apart_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 222
-        width: 54
-        height: 81
+        x: 450
+        y: 1218
+        width: 72
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,19 +170,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca398b195810ced4e88bdbcfff1abe60
+      spriteID: 346506ffb6ffaec43a2b08c5b8d03107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_3
+      name: Apart_3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 294
-        width: 33
-        height: 75
+        x: 72
+        y: 1026
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,19 +190,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1f9d7a1de0abb4185cebc8e5ef0903
+      spriteID: 695fd21d24435434cb7c34e5c9c37f48
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_4
+      name: Apart_4
       rect:
         serializedVersion: 2
-        x: 303
-        y: 297
-        width: 30
-        height: 75
+        x: 264
+        y: 1026
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,19 +210,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f200a6323a094f4284e668ff62b9048
+      spriteID: 4417048c2cf441b4b935e74c74a194a4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_5
+      name: Apart_5
       rect:
         serializedVersion: 2
-        x: 375
-        y: 294
+        x: 456
+        y: 1026
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59922dbeff68c2145a5c4efccffe450b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 834
         width: 36
-        height: 75
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f57b2fa3392ed24dae6e899d193f7ce
+      spriteID: d026594b4827cb54da3968dee91fdb38
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_6
+      name: Apart_7
       rect:
         serializedVersion: 2
-        x: 234
-        y: 201
+        x: 276
+        y: 834
         width: 36
-        height: 75
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,19 +270,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab319c873ed3a6e4f85b6a8d5df9b202
+      spriteID: fa2892d350219274399dd4abbd7bc649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_7
+      name: Apart_8
       rect:
         serializedVersion: 2
-        x: 312
-        y: 204
-        width: 30
-        height: 75
+        x: 468
+        y: 834
+        width: 36
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,159 +290,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622231e83ba38a0488afb8dad110f87b
+      spriteID: 6ddd700b0ad13be4cbfce0dda8e02881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_8
+      name: Apart_9
       rect:
         serializedVersion: 2
-        x: 384
-        y: 201
-        width: 33
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edf79f2898178a141bf2f8b0c447393b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_9
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 114
-        width: 45
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcf6363eb9774b24584156c1c0771786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_10
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 117
-        width: 54
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d549ce7fda0142d4d8afde7cdffe3f19
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_11
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 114
-        width: 45
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c0b9b303f4b39c4da7e44fc29da8eb4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_12
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 114
-        width: 30
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9c00b9965f693f41be24663cbbcebac
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_13
-      rect:
-        serializedVersion: 2
-        x: 291
-        y: 114
-        width: 39
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc0145c81d8c49145911f99f3f638212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_14
-      rect:
-        serializedVersion: 2
-        x: 357
-        y: 114
-        width: 39
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7ef5ea83304c4a4d83eaf6215d8a29f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_15
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 141
+        x: 90
+        y: 642
         width: 12
-        height: 18
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,19 +310,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 910e81a9a21746d45a7d0a167e5ebe9b
+      spriteID: f6a5594801f77364c9c77d0f9439ff03
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_16
+      name: Apart_10
       rect:
         serializedVersion: 2
-        x: 399
-        y: 147
+        x: 282
+        y: 642
         width: 12
-        height: 15
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,79 +330,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec62f08e957ad84da23719951400e5a
+      spriteID: 26ce72c35724a2a44ab6976e20ab6bfd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_17
+      name: Apart_11
       rect:
         serializedVersion: 2
-        x: 9
-        y: 15
-        width: 54
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1ee235ddd9915d4882f940432d3225a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_18
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 15
-        width: 54
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81abce14e67843f42853d89aef3c30f4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_19
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 15
-        width: 54
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1b80076a96833b459f1bce64c9050bc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dzieranBig_20
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 54
+        x: 474
+        y: 642
         width: 12
-        height: 15
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,19 +350,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce821b1c501a42644949baf30e5b4176
+      spriteID: 439ed104b089fdd40883dc44bf097fe0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_21
+      name: Apart_12
       rect:
         serializedVersion: 2
-        x: 240
-        y: 48
-        width: 12
-        height: 18
+        x: 72
+        y: 450
+        width: 36
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,19 +370,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c370cc29c5933e14388ecdbcca16d05c
+      spriteID: 1a66d560797805f4cae1f3b567328fd3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_22
+      name: Apart_13
       rect:
         serializedVersion: 2
-        x: 249
-        y: 21
-        width: 39
-        height: 78
+        x: 264
+        y: 450
+        width: 36
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,19 +390,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb3981dbe041a014897d2c919121292b
+      spriteID: 21b3a9b257edc8f479202aad7010d582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_23
+      name: Apart_14
       rect:
         serializedVersion: 2
-        x: 315
-        y: 21
-        width: 39
-        height: 75
+        x: 456
+        y: 450
+        width: 36
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,19 +410,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b77561ad0cdf96439f48d112064a4bd
+      spriteID: 711630be1769a7949879374ce3a66a80
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranBig_24
+      name: Apart_15
       rect:
         serializedVersion: 2
-        x: 375
-        y: 21
-        width: 30
-        height: 75
+        x: 60
+        y: 258
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,7 +430,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46d9fcfe853c34e4cbd2b87b97695f2e
+      spriteID: 5bed10cd30fb9ef4f85317e81df90dcb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_16
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 258
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a8bb4cb0afe8c46a23e4e275c87720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_17
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 258
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d6f680e134a7445b2c10f3e14086da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_18
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 66
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa88f26dacad7964a920da8f06b2c934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_19
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 66
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd44796481b01db4d851104bb894fd83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apart_20
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 66
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae268fe8d6e49fb4aad18f2c93154b47
       vertices: []
       indices: 
       edges: []
@@ -622,7 +538,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5b545fd1db4c56041ae1c911973aa4b7
+    spriteID: 908f3652983e24a49a47f37f2326f4e1
     vertices: []
     indices: 
     edges: []

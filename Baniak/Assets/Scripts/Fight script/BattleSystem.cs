@@ -131,7 +131,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             state = BattleState.EnemyTurn;
-            StartCoroutine(EnemyThunderEyesAttack());
+            StartCoroutine(EnemyBellyAttack());
         }
     }
     IEnumerator PlayerBeardAttack()
@@ -144,7 +144,7 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Ups... Chyba nie zadziałało...";
         yield return new WaitForSeconds(1.5f);
         state = BattleState.EnemyTurn;
-        StartCoroutine(EnemyFourTonesAttack());
+        StartCoroutine(EnemyThunderEyesAttack());
         Destroy(beard);
     }
 
@@ -152,7 +152,10 @@ public class BattleSystem : MonoBehaviour
     {
         SetButtonsActive(false);
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-        playerUnit.currentHealthPoints += 1;
+        if (playerUnit.currentHealthPoints < playerUnit.maxHealthPoints)
+        {
+            playerUnit.currentHealthPoints += 1;
+        }
         dialogueText.text = "Poczuj ciepło tego koca!";
         blanket.SetActive(true);
         blanket.GetComponent<Animator>().SetBool("blanket", true);
@@ -203,7 +206,8 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.Won)
         {
-            dialogueText.text = "Pokonałeś przeciwnika!!!";
+            StartCoroutine(EnemyLostAnimation());
+            dialogueText.text = "Dzieran pokonany!!!";
         }
         else if(state==BattleState.Lost)
         {
@@ -221,24 +225,39 @@ public class BattleSystem : MonoBehaviour
     IEnumerator EnemyFourTonesAttack()
     {
         float tonesYPosition = tones.transform.position.y;
- 
         DzieranHypnotizedEvent();
         dialogueText.text = enemyUnit.unitName + " i jego cztery tony nacisku!";
         enemyUnit.GetComponent<Animator>().SetBool("4tones", true);
         yield return new WaitForSeconds(1f);
         tones.SetActive(true);
         tones.GetComponent<Animator>().SetBool("4tones", true);
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(1.5f);
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
         playerHUD.SetHealthPoints(playerUnit.currentHealthPoints);
         tones.SetActive(false);
         enemyUnit.GetComponent<Animator>().SetBool("4tones", false);
         tones.transform.position = tones.transform.position + new Vector3(0f, -tonesYPosition, 0);
-
         StartCoroutine(PlayerDamageAnimation());
         yield return new WaitForSeconds(3f);
         SetNewBattleState(isDead);
     }
+
+    IEnumerator EnemyBellyAttack()
+    {
+        float emeyYposition = enemyUnit.transform.position.y;
+        DzieranHypnotizedEvent();
+        dialogueText.text = enemyUnit.unitName + " atakuje brzuchem!";
+        enemyUnit.GetComponent<Animator>().SetBool("bellyAttack", true);
+        yield return new WaitForSeconds(1.8f);
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        playerHUD.SetHealthPoints(playerUnit.currentHealthPoints);
+        enemyUnit.GetComponent<Animator>().SetBool("bellyAttack", false);
+        enemyUnit.transform.position = tones.transform.position + new Vector3(0f, -emeyYposition, 0);
+        StartCoroutine(PlayerDamageAnimation());
+        yield return new WaitForSeconds(3f);
+        SetNewBattleState(isDead);
+    }
+
 
     IEnumerator EnemyThunderEyesAttack()
     {
@@ -308,6 +327,12 @@ IEnumerator EnemyDamageAnimation()
     {
         enemyUnit.GetComponent<Animator>().SetBool("coinHypnotized", true);
         yield return new WaitForSeconds(1.5f);
+    }
+
+    IEnumerator EnemyLostAnimation()
+    {
+        enemyUnit.GetComponent<Animator>().SetTrigger("lose");
+        yield return new WaitForSeconds(5f);
     }
 
     public void SetNewBattleState(bool isDead)

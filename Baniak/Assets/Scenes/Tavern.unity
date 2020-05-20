@@ -403,7 +403,7 @@ MonoBehaviour:
   dialogue:
     characterName: Kozi
     sentences:
-    - Stranger danger!! Stranger danger!!
+    - Stranger danger!!! Stranger danger!!!
     - "Jeste\u015B znajomym Cioci? Ale nie takim jak Pan B\u0105k?"
     - "To dobrze. M\xF3g\u0142by Pan Jej powiedzie\u0107,"
     - "\u017Ce nied\u0142ugo wr\xF3c\u0119 na obiad? "
@@ -1486,6 +1486,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3055796156925038213, guid: 832ad16a6293c454b8a0e18fa187dcdb,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Mniejsza... Musimy uratowa\u0107 ch\u0142opak\xF3w! "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832ad16a6293c454b8a0e18fa187dcdb, type: 3}
 --- !u!1001 &303467646
@@ -1944,8 +1949,8 @@ MonoBehaviour:
       czy jak? "
     - Ja na takich jak Ty mam papiery w teczce
     - "wi\u0119c je\u015Bli si\u0119 zaraz nie ruszysz "
-    - "to si\u0119 spotkamy w mniej przyjemnych warunkach\u2026"
-    - "Hmmm\u2026 ale brod\u0119 to masz Pan zaiste imponuj\u0105c\u0105\u2026"
+    - "to si\u0119 spotkamy w mniej przyjemnych warunkach..."
+    - "Hmmm... ale brod\u0119 to masz Pan zaiste imponuj\u0105c\u0105..."
     - "Nic to! Zmykaj, zaj\u0119ty jestem!"
   missionNotAccomplishedDialogue:
     characterName: 
@@ -2126,7 +2131,7 @@ MonoBehaviour:
   dialogue:
     characterName: Nikos
     sentences:
-    - "Troch\u0119 tu zimno\u2026 a ja musz\u0119 jecha\u0107 do TJa."
+    - "Troch\u0119 tu zimno... a ja musz\u0119 jecha\u0107 do TJa."
     - Czemu do Niego? To nie Twoja sprawa!
   missionNotAccomplishedDialogue:
     characterName: 

@@ -64,12 +64,11 @@ public class NPC : MonoBehaviour
         
         if (!hasDialogueVariants)
         {
-            this.dialogueManager.StartDialogue(dialogue);
-
+            this.dialogueManager.StartDialogue(dialogue);   
         }
         else
         {
-            GetComponent<DialogueTrigger>().TriggerDialogue();
+           GetComponent<DialogueTrigger>().TriggerDialogue();
         }
         dialogueStarted = true;
     }

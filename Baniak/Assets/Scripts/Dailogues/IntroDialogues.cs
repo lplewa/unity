@@ -6,6 +6,7 @@ public class IntroDialogues : MonoBehaviour
 {
     private DialogueManager dialogueManager;
     private NPCDialogue dialogue;
+    public string nextScene;
    
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class IntroDialogues : MonoBehaviour
 
         if (dialogueManager.missionStarted)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("BaniaksPlayRoom");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
         }
     }
 }

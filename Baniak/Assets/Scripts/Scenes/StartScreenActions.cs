@@ -20,5 +20,8 @@ public class StartScreenActions : MonoBehaviour
         Application.Quit();
     }
 
-    
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

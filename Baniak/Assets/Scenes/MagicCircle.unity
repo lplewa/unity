@@ -2039,6 +2039,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!114 &1095460815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,9 +2052,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogue:
+    characterName: 
+    sentences: []
   dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 1
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: 0fc88aeb7b0d822469bc14ffb16b6b74, type: 3}
 --- !u!114 &1095460816
 MonoBehaviour:
@@ -3053,7 +3059,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11372549, g: 0.105882354, b: 0.105882354, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -3389,6 +3395,7 @@ MonoBehaviour:
   missionStarted: 0
   missionAccomplished: 0
   NPCName: 
+  dialogueEnded: 0
 --- !u!114 &6124527101200724873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3442,9 +3449,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8852cbe72734c42ba513f431d6d689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogue:
+    characterName: 
+    sentences: []
   dialogueStarted: 0
   isRotating: 0
   hasDialogueVariants: 0
+  dialogueStopped: 0
   avatar: {fileID: 21300000, guid: d72a851b4a853be48b51b83412650706, type: 3}
 --- !u!4 &6124527101200724879
 Transform:

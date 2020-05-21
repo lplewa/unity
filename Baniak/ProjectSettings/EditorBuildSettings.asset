@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Empty Tavern.unity
     guid: 0440c9f83aa5e594fbda2f5b5776217a
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoomBeforeFight.unity
+    guid: 8df45a5fad084f84ab4d99d61b5609f8
   - enabled: 0
     path: 
     guid: 86b33dc6200ccf04f80d69927d6c882c
@@ -47,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleLost.unity
     guid: 498be73ab4f180f4ab9be6e27ef0b43a
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoom Ending.unity
+    guid: 0e66c4044aa05804aaf0dac90b1f71c3
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: 96c1637abf647d64bb594d0b0f7be24d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 378c5722e8c8bde479928143611d59df
   m_configObjects: {}

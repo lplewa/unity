@@ -208,6 +208,7 @@ public class BattleSystem : MonoBehaviour
         {
             StartCoroutine(EnemyLostAnimation());
             dialogueText.text = "Dzieran pokonany!!!";
+            StartCoroutine(MoveToNextScene());
         }
         else if(state==BattleState.Lost)
         {
@@ -220,6 +221,12 @@ public class BattleSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("BattleLost");
+    }
+
+    IEnumerator MoveToNextScene()
+    {
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene("BaniaksPlayRoom Ending");
     }
 
     IEnumerator EnemyFourTonesAttack()

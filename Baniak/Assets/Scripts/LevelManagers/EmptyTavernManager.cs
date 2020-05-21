@@ -21,6 +21,8 @@ public class EmptyTavernManager : MonoBehaviour
     private bool baniakResponseStarted;
     private bool dzieranResponseStarted;
 
+    public string nextLocationName;
+
     public void Start()
     {
         dzieranSpeachStarted = false;
@@ -72,10 +74,10 @@ public class EmptyTavernManager : MonoBehaviour
         if (dzieran.dialogueStopped) activeDailogue = ActiveDailogue.AllDailoguesStopped;
     }
 
-   IEnumerator MoveToGamesRoom()
+   IEnumerator MoveToNextLocation(string locationName)
     {
         yield return new WaitForSeconds(1f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Games Room Fight");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(locationName);
  
     }
 
@@ -84,7 +86,7 @@ public class EmptyTavernManager : MonoBehaviour
         if (activeDailogue == ActiveDailogue.DzieranSpeach) DzieranSpeach();
         else if (activeDailogue == ActiveDailogue.BaniakResponse) BaniakResponse();
         else if (activeDailogue == ActiveDailogue.DzieranResponse) DzieranResponse();
-        else if (activeDailogue == ActiveDailogue.AllDailoguesStopped) StartCoroutine(MoveToGamesRoom());
+        else if (activeDailogue == ActiveDailogue.AllDailoguesStopped) StartCoroutine(MoveToNextLocation(nextLocationName));
     }
 
 

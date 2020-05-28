@@ -103,10 +103,10 @@ TextureImporter:
       name: Dzieran_Idle_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 14
-        width: 108
-        height: 162
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,7 +114,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 321a2b2bab43d574b93b33aca025c495
+      spriteID: 0f9e5c35fe6c62440bf76f08fdacbbc9
       vertices: []
       indices: 
       edges: []
@@ -123,10 +123,10 @@ TextureImporter:
       name: Dzieran_Idle_1
       rect:
         serializedVersion: 2
-        x: 234
-        y: 14
-        width: 108
-        height: 162
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bea9a1676f260c4786f5e916e32a1f7
+      spriteID: 5f48939215277b54f950d901fcafecbd
       vertices: []
       indices: 
       edges: []
@@ -143,10 +143,10 @@ TextureImporter:
       name: Dzieran_Idle_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 14
-        width: 108
-        height: 162
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 209481973628b85439db245cf78d9514
+      spriteID: 3d0c2fca8bea9c742961013c7969b92c
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: Dzieran_Idle_3
       rect:
         serializedVersion: 2
-        x: 618
-        y: 14
-        width: 108
-        height: 162
+        x: 576
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef40f2ad70fcddd46b0b1a9cbfb4f777
+      spriteID: 7e38fccdefdcf984eaa82470a5242fed
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: Dzieran_Idle_4
       rect:
         serializedVersion: 2
-        x: 810
-        y: 14
-        width: 108
-        height: 162
+        x: 768
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a8a7340a2b68f54a9d786cdd55192f4
+      spriteID: baefc4b64a2ae4b47b7f68654f68e575
       vertices: []
       indices: 
       edges: []

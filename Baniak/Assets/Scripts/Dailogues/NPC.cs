@@ -36,6 +36,16 @@ public class NPC : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        foreach(ContactPoint2D contactPoint in collision.contacts)
+        {
+            if (contactPoint.normal.y < 0)
+            {
+                if (isRotating)
+                {
+                    GetComponent<Animator>().SetBool("Speaking", true);
+                }
+            }
+        }
         StartTalking();
     }
 
@@ -43,7 +53,8 @@ public class NPC : MonoBehaviour
     {
         StartTalking();
     }
-    
+
+
     private void OnCollisionExit2D(Collision2D collision)
     {
 
@@ -57,11 +68,6 @@ public class NPC : MonoBehaviour
     
     public void StartTalking()
     {
-        if (isRotating)
-        {
-            GetComponent<Animator>().SetBool("Speaking", true);
-        }
-        
         if (!hasDialogueVariants)
         {
             this.dialogueManager.StartDialogue(dialogue);   

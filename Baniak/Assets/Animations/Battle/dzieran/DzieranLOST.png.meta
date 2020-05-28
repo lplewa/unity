@@ -1,23 +1,23 @@
 fileFormatVersion: 2
-guid: 9c8dffdb935efea43a516360e7b8ab22
+guid: 56aae220f08fd284bb30bd161e2bdda4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dzieranLose_0
-    21300002: dzieranLose_1
-    21300004: dzieranLose_2
-    21300006: dzieranLose_3
-    21300008: dzieranLose_4
-    21300010: dzieranLose_5
-    21300012: dzieranLose_6
-    21300014: dzieranLose_7
-    21300016: dzieranLose_8
-    21300018: dzieranLose_9
-    21300020: dzieranLose_10
-    21300022: dzieranLose_11
-    21300024: dzieranLose_12
-    21300026: dzieranLose_13
-    21300028: dzieranLose_14
-    21300030: dzieranLose_15
+    21300000: DzieranLOST_0
+    21300002: DzieranLOST_1
+    21300004: DzieranLOST_2
+    21300006: DzieranLOST_3
+    21300008: DzieranLOST_4
+    21300010: DzieranLOST_5
+    21300012: DzieranLOST_6
+    21300014: DzieranLOST_7
+    21300016: DzieranLOST_8
+    21300018: DzieranLOST_9
+    21300020: DzieranLOST_10
+    21300022: DzieranLOST_11
+    21300024: DzieranLOST_12
+    21300026: DzieranLOST_13
+    21300028: DzieranLOST_14
+    21300030: DzieranLOST_15
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dzieranLose_0
+      name: DzieranLOST_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,13 +125,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c4ccbf6cc87f3d4cb77b60a2f351cfc
+      spriteID: 394ac2ebac00d5348b3b72e3e8f95dea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_1
+      name: DzieranLOST_1
       rect:
         serializedVersion: 2
         x: 576
@@ -145,13 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca81ed15f41d0aa4193a8c6cd5d74523
+      spriteID: 3818d3946e0303249b1ebe37565312b6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_2
+      name: DzieranLOST_2
       rect:
         serializedVersion: 2
         x: 1152
@@ -165,13 +165,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcc6aff6f47123842a41d2a6b86f2fb3
+      spriteID: 2b33bf5a70e29684584e37b05456172b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_3
+      name: DzieranLOST_3
       rect:
         serializedVersion: 2
         x: 0
@@ -185,13 +185,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfa3915ed529b7b47bb68687c91bdfcc
+      spriteID: b6754cbb057a0c3459565ceb2b8571a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_4
+      name: DzieranLOST_4
       rect:
         serializedVersion: 2
         x: 576
@@ -205,13 +205,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c62683299d32f194b87d14a52f0e7d96
+      spriteID: a20457ba97bbbe84fa73775606a33c73
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_5
+      name: DzieranLOST_5
       rect:
         serializedVersion: 2
         x: 1152
@@ -225,13 +225,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053b587fc7363c14f876fccc347ca895
+      spriteID: eda78085a7927474c8d2590bdc9179d8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_6
+      name: DzieranLOST_6
       rect:
         serializedVersion: 2
         x: 0
@@ -245,13 +245,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0e890d8eab5e174096c326de5509545
+      spriteID: d1b85a4d7bcc52640af87830b2d46bf7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_7
+      name: DzieranLOST_7
       rect:
         serializedVersion: 2
         x: 576
@@ -265,13 +265,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7d9da1fe17bcd84395467a46ec37376
+      spriteID: bdc7a38191d50d541aa2c32a5d7d91e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_8
+      name: DzieranLOST_8
       rect:
         serializedVersion: 2
         x: 1152
@@ -285,13 +285,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f77eeffe9dd8855458d46356aa6b95ff
+      spriteID: 390d916815572174f8448c45292df4e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_9
+      name: DzieranLOST_9
       rect:
         serializedVersion: 2
         x: 0
@@ -305,13 +305,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0fb6eb737673f54b876a12f2fca143f
+      spriteID: 4091e4356e5986942ba329308ff13a3a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_10
+      name: DzieranLOST_10
       rect:
         serializedVersion: 2
         x: 576
@@ -325,13 +325,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 094bc42872e98c245a7b361871077467
+      spriteID: 95a9af99266694c4880e4d6169682b30
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_11
+      name: DzieranLOST_11
       rect:
         serializedVersion: 2
         x: 1152
@@ -345,13 +345,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c88844e64aa58543a1e7a55d0987b99
+      spriteID: d07abb315cb6d4d40ab60496a7472c8f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_12
+      name: DzieranLOST_12
       rect:
         serializedVersion: 2
         x: 0
@@ -365,13 +365,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ad4bc1adad5b940909531eeb180458
+      spriteID: 960a42397a033f046b0073c2ee02bbc6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_13
+      name: DzieranLOST_13
       rect:
         serializedVersion: 2
         x: 576
@@ -385,13 +385,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bde1c74bb1c2e61468eeb29c400c71f5
+      spriteID: 84cbcc7e8a4730742930c53da2a45eec
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_14
+      name: DzieranLOST_14
       rect:
         serializedVersion: 2
         x: 1152
@@ -405,13 +405,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f44830921995d7439c874567ba8a924
+      spriteID: 97795a7f1949ab34aa4327718b3e1cf1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dzieranLose_15
+      name: DzieranLOST_15
       rect:
         serializedVersion: 2
         x: 0
@@ -425,7 +425,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d90476c550f57b419055106aaf58b9d
+      spriteID: 1758a0fe2bb4cfc49ab5efec3b3f75fa
       vertices: []
       indices: 
       edges: []
@@ -433,7 +433,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a9c523c7a3347b8429a37068e33f267a
+    spriteID: 013a66c2f11e1234eba351a79828196f
     vertices: []
     indices: 
     edges: []

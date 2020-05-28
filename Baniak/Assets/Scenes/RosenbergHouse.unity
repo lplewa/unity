@@ -2339,7 +2339,7 @@ MonoBehaviour:
     characterName: Pani Rosenberg
     sentences:
     - " Fantastycznie, widz\u0119 \u017Ce znalaz\u0142 Pan zgub\u0119."
-    - "Prosz\u0119 przekaza\u0107 serdeczne pozdrowienia dla Pana Noble\u2019a, "
+    - "Prosz\u0119 przekaza\u0107 serdeczne pozdrowienia dla Pana Noble'a, "
     - "a Panu \u017Cycz\u0119 powodzenia\r"
 --- !u!114 &1169826192
 MonoBehaviour:

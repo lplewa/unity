@@ -241,15 +241,15 @@ MonoBehaviour:
   dialogue:
     characterName: 
     sentences:
-    - Jest rok 2020 przed nastaniem Cthulhu.
-    - "Wszystkie piwnice s\u0105 opuszczone przez graczy.... Wszystkie?"
-    - "Nie! Jedna jedyna piwnica zamieszkana przez nieugi\u0119tych erpegowc\xF3w"
-    - "przyjmuje zagubione dusze i uprzykrza \u017Cycie innym niedowiarkom pokazuj\u0105c,"
-    - "\u017Ce RPG jeszcze nie przepad\u0142o, wr\u0119cz przeciwnie, dla nich to
-      dopiero pocz\u0105tek"
-    - "Wszystko zaczyna si\u0119 w gralni,"
-    - "gdy po ci\u0119\u017Ckim dniu i tygodniach planowania kolejnej sesji"
-    - "Micha\u0142 siada przy komputerze i w\u0142acza skype\u2019a\u2026 "
+    - "Jest rok 2020 przed nastaniem Cthulhu.\nWszystkie piwnice s\u0105 opuszczone
+      przez graczy.... Wszystkie?"
+    - "Nie! Jedna jedyna piwnica zamieszkana przez nieugi\u0119tych erpegowc\xF3w
+      przyjmuje zagubione dusze i uprzykrza \u017Cycie innym niedowiarkom."
+    - "pokazuj\u0105c, \u017Ce RPG jeszcze nie przepad\u0142o. wr\u0119cz przeciwnie,
+      dla nich to dopiero pocz\u0105tek."
+    - "Wszystko zaczyna si\u0119 w gralni, gdy po ci\u0119\u017Ckim dniu i tygodniach
+      planowania kolejnej sesji Micha\u0142 siada przy komputerze i w\u0142\u0105cza
+      skype'a..."
     - "Ale co to? Gdzie si\u0119 podziali Jego Gracze?!"
   missionNotAccomplishedDialogue:
     characterName: 
@@ -703,7 +703,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1763a8d8368684542b603002e74330e1, type: 3}
-    m_FontSize: 55
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: Testowy tekst tak bardzo
 --- !u!222 &890548376
 CanvasRenderer:

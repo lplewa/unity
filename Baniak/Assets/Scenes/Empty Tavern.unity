@@ -3541,6 +3541,27 @@ PrefabInstance:
       propertyPath: dialogueAnimator
       value: 
       objectReference: {fileID: 1116366167}
+    - target: {fileID: 4955495867738008264, guid: 39ca2d79dfb8f7e4db4a0407996a1a63,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955495867738008264, guid: 39ca2d79dfb8f7e4db4a0407996a1a63,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Wszystkie te chwile zostan\u0105 stracone w czasie... jak \u0142zy w
+        deszczu."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955495867738008264, guid: 39ca2d79dfb8f7e4db4a0407996a1a63,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: "Ale znaj m\u0105 \u0142ask\u0119, wybierz miejsce swojej \u015Bmierci. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955495867738008264, guid: 39ca2d79dfb8f7e4db4a0407996a1a63,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: "Pora umiera\u0107."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ca2d79dfb8f7e4db4a0407996a1a63, type: 3}
 --- !u!4 &7023037315090331888 stripped

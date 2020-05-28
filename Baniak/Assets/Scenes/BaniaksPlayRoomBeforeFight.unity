@@ -2335,7 +2335,7 @@ MonoBehaviour:
   dialogue:
     characterName: Dzieran
     sentences:
-    - "Nie m\xF3wi\u0142e\u015B, \u017Ce to cholerne spotkanie b\u0119dzie, w piwnicy. "
+    - "Nie m\xF3wi\u0142e\u015B, \u017Ce to cholerne spotkanie b\u0119dzie w piwnicy. "
     - " M\xF3wi\u0142e\u015B, \u017Ce to b\u0119dzie gralnia. "
   missionNotAccomplishedDialogue:
     characterName: Dzieran

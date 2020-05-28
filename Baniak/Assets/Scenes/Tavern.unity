@@ -1290,6 +1290,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866200787241446442, guid: 1c8e462187c1f3d42957683e0c7cbcf0,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: "Pom\xF3\u017C im Micha\u0142, jeste\u015B ich jedyn\u0105 nadziej\u0105."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c8e462187c1f3d42957683e0c7cbcf0, type: 3}
 --- !u!1001 &303467646
@@ -4345,6 +4350,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285365556482875678, guid: a0365a0df3775fd4dbc7cc6031e4624b,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Troch\u0119 tu zimno... a ja musz\u0119 jecha\u0107 do TJ'a."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285365557132377080, guid: a0365a0df3775fd4dbc7cc6031e4624b,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Widzia\u0142e\u015B mo\u017Ce Pani\u0105 Rosenberg?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285365557132377080, guid: a0365a0df3775fd4dbc7cc6031e4624b,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Niewa\u017Cne po co mi ona cz\u0142owieku! Co Ty? Ksi\u0105\u017Ck\u0119
+        piszesz czy jak? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285365557132377080, guid: a0365a0df3775fd4dbc7cc6031e4624b,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Ja na takich jak Ty mam papiery w teczce,
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0365a0df3775fd4dbc7cc6031e4624b, type: 3}

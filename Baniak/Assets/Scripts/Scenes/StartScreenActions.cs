@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StartScreenActions : MonoBehaviour
 {
-    private void Start()
-    {
-        AudioSource audiosource = FindObjectOfType<AudioSource>();
-        if(audiosource!=null) Destroy(audiosource);
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene("Intro");

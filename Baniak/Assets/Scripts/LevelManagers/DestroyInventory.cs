@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class DestroyInventory : MonoBehaviour
 {
+    CoinCollector coinCollector;
+    Inventory inventory;
+    DialoguesEndedCollector dialoguesEndedCollector;
+
     void Start()
     {
-        InventoryCanvas inventory = FindObjectOfType<InventoryCanvas>();
-        if (inventory != null) Destroy(inventory.gameObject);
+        InventoryCanvas Canvas = FindObjectOfType<InventoryCanvas>();
+        if (Canvas != null) Destroy(Canvas.gameObject);
+
+        coinCollector = FindObjectOfType<CoinCollector>();
+        Destroy(coinCollector.gameObject);
 
     }
 

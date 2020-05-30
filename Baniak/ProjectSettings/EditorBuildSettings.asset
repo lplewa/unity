@@ -4,5 +4,62 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: 12814faed9f51dc45a827b3a993c9d22
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: c212748e2593c5843a75c79f1c99d99d
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 3dabc93087413e043a7000bdf2561abd
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoom.unity
+    guid: 47ba0e780d92b19418d7b0825eeef931
+  - enabled: 1
+    path: Assets/Scenes/ClaytonAuntRoom.unity
+    guid: 803ca7c27b8ca3b4e8722c8cbf7221de
+  - enabled: 1
+    path: Assets/Scenes/MagicCircle.unity
+    guid: 6afa56804499dd1429145921f2685ef5
+  - enabled: 1
+    path: Assets/Scenes/FuneralHome.unity
+    guid: a907b3a059b7aae46973cfe37790e3aa
+  - enabled: 1
+    path: Assets/Scenes/RosenbergHouse.unity
+    guid: eeff571339a8aee4d95801c43fc6b320
+  - enabled: 1
+    path: Assets/Scenes/Tavern.unity
+    guid: 0f3a742b0599f014cb91a89b5f78aa16
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: 232ac7f1b95b4474baa79e45adf28580
+  - enabled: 1
+    path: Assets/Scenes/Travel.unity
+    guid: 3ed5329935dec1849945581ec3e1c759
+  - enabled: 1
+    path: Assets/Scenes/Empty Tavern.unity
+    guid: 0440c9f83aa5e594fbda2f5b5776217a
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoomBeforeFight.unity
+    guid: 8df45a5fad084f84ab4d99d61b5609f8
+  - enabled: 0
+    path: 
+    guid: 86b33dc6200ccf04f80d69927d6c882c
+  - enabled: 1
+    path: Assets/Scenes/Games Room Fight.unity
+    guid: 638ed4e5bf3be824ca81a4f9292c736b
+  - enabled: 1
+    path: Assets/Scenes/BattleLost.unity
+    guid: 498be73ab4f180f4ab9be6e27ef0b43a
+  - enabled: 1
+    path: Assets/Scenes/BaniaksPlayRoom Ending.unity
+    guid: 0e66c4044aa05804aaf0dac90b1f71c3
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: 96c1637abf647d64bb594d0b0f7be24d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 378c5722e8c8bde479928143611d59df
   m_configObjects: {}

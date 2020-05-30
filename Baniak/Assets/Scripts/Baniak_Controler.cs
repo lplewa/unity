@@ -8,96 +8,90 @@ public class Baniak_Controler : MonoBehaviour
     public enum State
     {
         Moving,
-        Talking
+        Talking,
     }
 
 
     public float speed = 6.0f;
-
+    public float movementSpeed = 4.5f;
     private Rigidbody2D rb = null;
-    private Animator animator = null;
+    public Animator animator = null;
     private Vector2 face = Vector2.down;
     public Dialogue_controler dialogue_Controler = null;
-
     public State state;
+    private string direction;
+
+
     void Start()
     {
-        //state = State.Moving;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         dialogue_Controler = GetComponent<Dialogue_controler>();
+        direction = "down";
+        animator.SetBool("Standing", true);
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (state == State.Moving) {
-            move();
-        }
+         if (state == State.Moving) {
+            Move();
+         }
 
-        if (state == State.Talking) {
-            talk();
-        }
+         if (state == State.Talking)
+         {
+             talk();
+         }
+    
+    }
+     void Move()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
+        SetMoveAnimation();
     }
 
-    void move()
+    void SetMoveAnimation()
     {
-        rb.velocity = Vector2.zero;
-     //   rb.angularVelocity = 0;
-        Vector2 moveDirection = Vector2.zero;
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-
-        if (x != 0 && y != 0)
-            return; /*no diagonal movement */
-
-        if (x != 0) {
-            if (x > 0) {
-                face = Vector2.right;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        if (horizontalInput != 0)
+        {
+            animator.SetBool("Standing", false);
+            if (horizontalInput > 0)
+            {
                 animator.SetInteger("MoveDirection", 2);
-            } else {
-                face = Vector2.left;
+                direction = "right";
+            }
+            else
+            {
                 animator.SetInteger("MoveDirection", 1);
+                direction = "left";
             }
         }
-
-        if (y != 0) {
-            if (y > 0) {
-                face = Vector2.up;
+       else if (verticalInput != 0)
+        {
+            animator.SetBool("Standing", false);
+            if (verticalInput > 0)
+            {
                 animator.SetInteger("MoveDirection", 3);
-            } else {
-                face = Vector2.down;
+                direction = "up";
+            }
+            else
+            {
                 animator.SetInteger("MoveDirection", 4);
-            }
+                direction = "down";
+            } 
         }
-        moveDirection = new Vector2(x, y);
-        moveDirection *= speed;
-        rb.velocity = moveDirection;
-
-        if (Input.GetButtonDown("Fire1")) {
-            int mask = LayerMask.GetMask("interakcja");
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, face, 10, mask);
-            if (hit) {
-                GameObject obj = hit.collider.gameObject;
-                Dialouge d = obj.GetComponent<Dialouge>();
-                if (d != null) {
-                    startDialouge(d);
-                }
-            }
+        else
+        {
+            animator.SetBool("Standing", true);
         }
-    }
-    public void startDialouge(Dialouge dialouge)
-    {
-        state = State.Talking;
-        this.dialogue_Controler.Start_dialogue(dialouge);
     }
 
     void talk()
     {
-        if (Input.anyKeyDown) {
-            if (dialogue_Controler.NextSentence()) {
-                state = State.Moving;
-            }
-        }
     }
+
 }
